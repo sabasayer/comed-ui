@@ -1,0 +1,11 @@
+@import "./reset.scss";
+
+@import "./colors.scss";
+
+:root {
+  --main-color: #{$orange-color};
+}
+
+div {
+  background-color: var(--main-color);
+}
