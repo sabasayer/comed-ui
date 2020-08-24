@@ -1,15 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./src/styles/main.scss">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+  </head>
+  <body id="app-wrapper" class="theme-white co--page--drawer">
+    <header>
+      header
+    </header>
     
-    <div>
-        Test
+    <div class="co--page--drawer-left">
+      left
     </div>
-</body>
+    <main class="co--grid">
+      <div class="co--tile">
+        <div class="co--row">
+          <div class="co--col co--col--auto">
+            <h4>CoMED UI</h2>
+          </div>
+
+          <select id="theme-selector" class="mr-3">
+            <option value="white">White</option>
+            <option value="g10">G-10</option>
+            <option value="g90">G-90</option>
+            <option value="g100">G-100</option>
+          </select>
+        </div>
+      </div>
+
+
+      <h4 class="mt-4">
+        Buttons
+      </h4>
+
+      <div class="co--row">
+        <div class="co--col-lg">
+          <div class="co--tile ">
+            <h5>sm</h5>
+            <button class="co--btn co--btn--primary co--btn--sm" type="button">
+              Button
+            </button>
+            <button class="co--btn co--btn--secondary co--btn--sm" type="button">
+              Button
+            </button>
+            <button class="co--btn co--btn--danger co--btn--sm" type="button">
+              Button
+            </button>
+          </div>
+        </div>
+        <div class="co--col-lg">
+          <div class="co--tile ">
+            <h5>field</h5>
+
+            <button class="co--btn co--btn--primary co--btn--field" type="button">
+              Button
+            </button>
+            <button class="co--btn co--btn--secondary co--btn--field" type="button">
+              Button
+            </button>
+            <button class="co--btn co--btn--danger co--btn--field" type="button">
+              Button
+            </button>
+          </div>
+        </div>
+
+        <div class="co--col-lg">
+          <div class="co--tile ">
+            <h5>lg</h5>
+            <button class="co--btn co--btn--primary" type="button">
+              Button
+            </button>
+            <button class="co--btn co--btn--secondary" type="button">
+              Button
+            </button>
+            <button class="co--btn co--btn--danger" type="button">
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+     
+
+      <div class="co--tile mt-3">
+        <h5>Button Set</h5>
+
+        <div class="co--btn-set">
+          <button class="co--btn co--btn--secondary">
+            Secondary Button
+          </button>
+          <button class="co--btn co--btn--primary">
+            Primary Button
+          </button>
+          <button class="co--btn co--btn--danger">
+            Danger Button
+          </button>
+          <button class="co--btn co--btn--tertiary">
+            Tertiary Button
+          </button>
+          <button class="co--btn co--btn--ghost">
+            Ghost Button
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="co--page--drawer-left">
+      right
+    </div>
+
+    <footer>
+      footer
+    </footer>
+    
+    <script src="./index.js"></script>
+  </body>
 </html>

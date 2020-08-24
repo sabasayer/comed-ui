@@ -4,11 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve":"parcel index.html --open"
+    "serve": "parcel index.html --open"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "@carbon/grid": "^10.14.0",
+    "@carbon/layout": "^10.12.0",
+    "@carbon/themes": "^10.17.0",
+    "carbon-components": "^10.18.0"
   }
 }
