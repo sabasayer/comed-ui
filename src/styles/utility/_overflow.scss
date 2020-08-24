@@ -1,11 +1,21 @@
-.overflow-auto{
-    overflow: auto;
+.overflow-auto {
+  overflow: auto;
 }
 
-.overflow-hidden{
-    overflow: hidden;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-.overflow-scroll{
-    overflow: scroll;
+.overflow-scroll {
+  overflow: scroll;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text-overflow-elipses{
+    @include text-overflow()
 }
