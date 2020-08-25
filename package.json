@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "parcel index.html --open"
+    "serve": "parcel ./src/**/*.html --open"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/main.scss" />
+  </head>
+  <body id="app-wrapper" class="theme-g10">
+    <div class="co--page--drawer">
+      <header>
+        <div class="co--tile mb-3">
+          <div class="co--row">
+            <div class="co--col co--col--auto">
+              <h4>CoMED UI</h4>
+            </div>
+
+            <select id="theme-selector" class="mr-3">
+              <option value="white">White</option>
+              <option value="g10" selected>G-10</option>
+              <option value="g90">G-90</option>
+              <option value="g100">G-100</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <div class="co--page--drawer__left">
+        <div class="co--side-nav co--side-nav--expanded" tabindex="1">
+          <div class="co--side-nav__items"></div>
+        </div>
+      </div>
+      <main>
+        <div id="dynamic-content-container" class="p-3 fill-height overflow-auto"></div>
+      </main>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
