@@ -1,0 +1,8 @@
+@import "carbon-components/scss/components/text-area/text-area";
+
+@import "../../../styles/globals/vars";
+
+.#{$prefix}--text-area {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}

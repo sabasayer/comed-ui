@@ -1,0 +1,9 @@
+@import "carbon-components/scss/components/toggle/toggle";
+
+.#{$prefix}--toggle-input:checked
+  + .#{$prefix}--toggle-input__label
+  > .#{$prefix}--toggle__switch {
+  &::before {
+    background-color: $support-04;
+  }
+}
