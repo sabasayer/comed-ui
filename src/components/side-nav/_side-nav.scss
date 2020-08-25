@@ -2,6 +2,7 @@
 @import "../../styles/colors";
 @import "carbon-components/scss/globals/scss/typography";
 @import "carbon-components/scss/globals/scss/helper-mixins";
+@import "carbon-components/scss/globals/scss/layout";
 @import "../../styles/utility/overflow";
 
 $unit: 0.5rem;
@@ -15,12 +16,24 @@ $unit: 0.5rem;
     opacity: 0;
   }
 
-  .#{$prefix}--side-nav--fixed &,
-  .#{$prefix}--side-nav--expanded & {
+  .#{$prefix}--side-nav--expanded &,
+  .#{$prefix}--side-nav:focus-within & {
     @if $opacity == true {
       opacity: 1;
     }
     @content;
+  }
+}
+
+@mixin direction($left: true) {
+  @if $left == true {
+    .#{$prefix}--side-nav--left & {
+      @content;
+    }
+  } @else {
+    .#{$prefix}--side-nav--right & {
+      @content;
+    }
   }
 }
 
@@ -36,8 +49,23 @@ $unit: 0.5rem;
   will-change: width;
   overflow: hidden;
 
-  &--expanded {
+  &--expanded,
+  &:focus-within {
     width: mini-units(32);
+  }
+
+  &--fixed {
+    position: fixed;
+    height: 100vh;
+    z-index: z("header");
+    top: 0;
+    bottom: 0;
+    &.#{$prefix}--side-nav--left {
+      left: 0;
+    }
+    &.#{$prefix}--side-nav--right {
+      right: 0;
+    }
   }
 }
 
@@ -106,6 +134,7 @@ $unit: 0.5rem;
   flex: 0 0 mini-units(2);
   align-items: center;
   justify-content: center;
+
   margin-right: mini-units(3);
 }
 
