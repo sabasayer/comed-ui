@@ -1,10 +1,18 @@
 export const siteMap = {
   Buttons: "components/button/button.html",
   "Side Nav": "components/side-nav/side-nav.html",
+  Search: "components/search/search.html",
   Checkbox: "components/form/checkbox/checkbox.html",
+  Radio: "components/form/radio/radio.html",
   "Text input": "components/form/text-input/text-input.html",
   "Text area": "components/form/text-area/text-area.html",
   Select: "components/form/select/select.html",
+  Slider:"components/slider/slider.html",
+  "Auto Complete": "components/form/autocomplete/autocomplete.html",
   Toggle: "components/form/toggle/toggle.html",
   "Page Drawer": "components/page-drawer/page-drawer.html",
+  Tabs: "components/tabs/tabs.html",
+  Tag: "components/tag/tag.html",
+  "Inline Notification": "components/notification/inline-notification.html",
+  "Toast Notification": "components/notification/toast-notification.html",
 };

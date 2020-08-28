@@ -9,21 +9,33 @@
 
   > header {
     grid-column: 1/4;
+    overflow: hidden;
+    overflow-x: auto;
   }
 
   > &__left {
     grid-column: 1/2;
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   > main {
     grid-column: 2/3;
+
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   > &__right {
     grid-column: 3/4;
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   > footer {
     grid-column: 1/4;
+
+    overflow: hidden;
+    overflow-x: auto;
   }
 }
