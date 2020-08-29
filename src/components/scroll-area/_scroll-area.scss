@@ -1,0 +1,8 @@
+.#{$prefix}--scroll-area {
+  overflow: auto;
+  height: 100%;
+  &--fit {
+    height: initial;
+    flex: 1 1 auo;
+  }
+}

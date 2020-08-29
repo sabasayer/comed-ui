@@ -1,0 +1,117 @@
+<button
+  aria-expanded="false"
+  aria-labelledby="example-q18u83exodi-label"
+  class="co--btn co--btn--secondary"
+  aria-controls="example-q18u83exodi"
+  data-popover-trigger
+  data-popover-target="#example-q18u83exodi"
+>
+  Popover
+</button>
+<div
+  id="example-q18u83exodi"
+  aria-hidden="true"
+  data-floating-menu-direction="right"
+  class="co--tooltip"
+>
+  <span class="co--tooltip__caret" data-popper-arrow></span>
+  <div
+    class="co--tooltip__content"
+    tabindex="-1"
+    role="dialog"
+    aria-describedby="example-q18u83exodi-body"
+    aria-labelledby="example-q18u83exodi-label"
+  >
+    <p id="example-q18u83exodi-body">
+      This is some tooltip text. This box shows the maximum amount of text that
+      should appear inside. If more room is needed please use a modal instead.
+    </p>
+    <div class="co--tooltip__footer">
+      <a href="#" class="co--link">Learn More</a>
+      <button class="co--btn co--btn--primary co--btn--sm" type="button">
+        Create
+      </button>
+    </div>
+  </div>
+  <!-- Note: focusable span allows for focus wrap feature within Tooltips -->
+  <span tabindex="0"></span>
+</div>
+
+<!-- Tooltip with Rich Text (heading and body content) but no interactive elements -->
+<button
+  aria-expanded="false"
+  aria-labelledby="example-mzgui9w4vv-label"
+  class="co--btn co--btn--secondary"
+  aria-controls="example-mzgui9w4vv"
+  data-popover-trigger
+  data-popover-target="#example-mzgui9w4vv"
+>
+  Popover 2
+</button>
+
+<div
+  id="example-mzgui9w4vv"
+  aria-hidden="true"
+  data-floating-menu-direction="bottom"
+  class="co--tooltip"
+>
+  <span class="co--tooltip__caret" data-popper-arrow></span>
+  <div
+    class="co--tooltip__content"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="example-mzgui9w4vv-heading"
+    aria-describedby="example-mzgui9w4vv-body"
+  >
+    <h4 id="example-mzgui9w4vv-heading" class="co--tooltip__heading">
+      Heading within a Tooltip
+    </h4>
+    <p id="example-mzgui9w4vv-body">
+      This is some tooltip text. This box shows the maximum amount of text that
+      should appear inside. If more room is needed please use a modal instead.
+    </p>
+  </div>
+  <span tabindex="0"></span>
+</div>
+
+<!-- Tooltip without visible label (not recommended for WCAG 2.1) -->
+<div
+  tabindex="0"
+  aria-expanded="false"
+  aria-labelledby="example-cjxyge8fvqe-label"
+  role="button"
+  class="co--btn co--btn--secondary"
+  aria-controls="example-cjxyge8fvqe"
+  data-popover-trigger
+  data-popover-target="#example-cjxyge8fvqe"
+>
+  Popover 3
+</div>
+
+<div
+  id="example-cjxyge8fvqe"
+  aria-hidden="true"
+  data-floating-menu-direction="left"
+  class="co--tooltip"
+>
+  <span class="co--tooltip__caret" data-popper-arrow></span>
+  <div
+    class="co--tooltip__content"
+    tabindex="-1"
+    role="dialog"
+    aria-describedby="example-cjxyge8fvqe-body"
+    aria-label="Tooltip label"
+  >
+    <p id="example-cjxyge8fvqe-body">
+      This is some tooltip text. This box shows the maximum amount of text that
+      should appear inside. If more room is needed please use a modal instead.
+    </p>
+    <div class="co--tooltip__footer">
+      <a href="#" class="co--link">Learn More</a>
+      <button class="co--btn co--btn--primary co--btn--sm" type="button">
+        Create
+      </button>
+    </div>
+  </div>
+  <span tabindex="0"></span>
+</div>

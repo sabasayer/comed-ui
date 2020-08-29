@@ -1,2 +1,35 @@
 @import "carbon-components/scss/components/notification/inline-notification";
 @import "carbon-components/scss/components/notification/toast-notification";
+
+.#{$prefix}--toast-notification {
+  &--fixed {
+    position: fixed;
+    &[data-toast-direction*="auto"] {
+      margin: auto;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+    }
+    &[data-toast-direction*="left"] {
+      right: initial;
+      left: 0;
+      margin-left: $spacing-05;
+    }
+    &[data-toast-direction*="right"] {
+      left: initial;
+      right: 0;
+      margin-right: $spacing-05;
+    }
+    &[data-toast-direction*="top"] {
+      bottom: initial;
+      top: 0;
+      margin-top: $spacing-05;
+    }
+    &[data-toast-direction*="bottom"] {
+      top: initial;
+      bottom: 0;
+      margin-bottom: $spacing-05;
+    }
+  }
+}

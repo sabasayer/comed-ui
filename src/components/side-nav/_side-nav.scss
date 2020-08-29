@@ -110,6 +110,10 @@ $unit: 0.5rem;
     background-color: $hover-ui;
   }
 
+  &:focus {
+    @include focus-outline("outline");
+  }
+
   &.#{$prefix}--side-nav__link--current::before {
     position: absolute;
     top: 0;

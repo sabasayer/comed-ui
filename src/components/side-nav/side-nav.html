@@ -1,9 +1,9 @@
 <!-- tabindex = 1 important for focus-within to work and open the nav -->
 
-<div class="co--side-nav" tabindex="1">
+<div class="co--side-nav" tabindex="0">
   <div class="co--side-nav__items">
     <div class="co--side-nav__item">
-      <div class="co--side-nav__link co--side-nav__link--current">
+      <div class="co--side-nav__link co--side-nav__link--current" tabindex="1">
         <div class="co--side-nav__icon">
           <svg
             width="20"
@@ -17,14 +17,12 @@
             />
           </svg>
         </div>
-        <span class="co--side-nav__link-text">
-          Left item
-        </span>
+        <span class="co--side-nav__link-text"> Left item </span>
       </div>
     </div>
 
     <div class="co--side-nav__item">
-      <div class="co--side-nav__link">
+      <div class="co--side-nav__link" tabindex="1">
         <div class="co--side-nav__icon">
           <svg
             width="20"
@@ -38,12 +36,8 @@
             />
           </svg>
         </div>
-        <span class="co--side-nav__link-text">
-          Left item 2
-        </span>
+        <span class="co--side-nav__link-text"> Left item 2 </span>
       </div>
     </div>
   </div>
 </div>
-
-

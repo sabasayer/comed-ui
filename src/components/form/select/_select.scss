@@ -6,3 +6,16 @@
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
 }
+
+.#{$prefix}--dropdown-list {
+  display: none;
+  max-height: initial;
+  width: initial;
+  &--shown {
+    display: flex;
+  }
+  .#{$prefix}--dropdown-item {
+    opacity: 1;
+    visibility: visible !important;
+  }
+}

@@ -1,0 +1,5 @@
+@import "carbon-components/scss/components/modal/modal";
+
+.#{$prefix}--modal-container {
+  border-radius: $border-radius;
+}

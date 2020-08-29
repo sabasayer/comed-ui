@@ -1,0 +1,27 @@
+@import "carbon-components/scss/components/tooltip/tooltip";
+
+$caret-size: rem(6.875px);
+
+.#{$prefix}--tooltip {
+  .#{$prefix}--tooltip__caret {
+    margin: initial;
+  }
+
+  &[data-floating-menu-direction="right"] {
+    .#{$prefix}--tooltip__caret {
+      border-top: $caret-size solid transparent;
+      border-right: $caret-size solid $inverse-02;
+      border-bottom: $caret-size solid transparent;
+      left: calc(-#{$caret-size * 2} + 1px);
+    }
+  }
+
+  &[data-floating-menu-direction="left"] {
+    .#{$prefix}--tooltip__caret {
+      border-top: $caret-size solid transparent;
+      border-left: $caret-size solid $inverse-02;
+      border-bottom: $caret-size solid transparent;
+      right: calc(-#{$caret-size * 2} + 1px);
+    }
+  }
+}

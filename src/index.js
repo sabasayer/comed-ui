@@ -1,12 +1,19 @@
 import { siteMap } from "./site-map";
+import { initiateTooltips } from "./components/tooltip/tooltip";
+import { initiatePopovers } from "./components/popover/popover";
+import { initiateSelects } from "./components/form/select/select";
+import { initiateTabs } from "./components/tabs/tabs";
+import { initiateNotification } from "./components/notification/notification";
+import { initiateModal } from "./components/modal/modal";
 
 const container = document.getElementById("dynamic-content-container");
 
 const createLink = (name, link) => {
-  let htmlString = `<div class="co--side-nav__item">
+  let htmlString = `<div class="co--side-nav__item" >
   <div
     data-href="${link}"
     class="co--side-nav__link"
+    tabindex="1"
   >
     <span class="co--side-nav__link-text">
       ${name}
@@ -19,6 +26,11 @@ const createLink = (name, link) => {
 
   // Change this to div.childNodes to support multiple top-level nodes
   return div.firstChild;
+};
+
+const clearLinksCurrentState = () => {
+  const links = document.querySelectorAll(".co--side-nav__link");
+  links.forEach((link) => link.classList.remove("co--side-nav__link--current"));
 };
 
 window.onload = () => {
@@ -39,6 +51,10 @@ window.onload = () => {
     const href = link.getAttribute("data-href");
     if (!href) return;
 
+    clearLinksCurrentState(items);
+
+    link.classList.add("co--side-nav__link--current");
+
     let headers = new Headers();
     headers.append("Content-Type", "text/html");
 
@@ -50,6 +66,13 @@ window.onload = () => {
         if (!response) return;
 
         container.innerHTML = response;
+
+        initiateTooltips();
+        initiatePopovers();
+        initiateSelects();
+        initiateTabs();
+        initiateNotification();
+        initiateModal();
       });
   };
 

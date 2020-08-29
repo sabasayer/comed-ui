@@ -1,0 +1,176 @@
+<!--
+  Copyright IBM Corp. 2016, 2018
+
+  This source code is licensed under the Apache-2.0 license found in the
+  LICENSE file in the root directory of this source tree.
+-->
+
+<!-- Using the trigger label as the tooltip label (can be repetitive for screen reader users) -->
+<div
+  id="example-q18u83exodi-label"
+  class="co--tooltip__label"
+  data-tooltip-trigger
+  data-tooltip-target="#example-q18u83exodi"
+>
+  Tooltip label
+  <button
+    aria-expanded="false"
+    aria-labelledby="example-q18u83exodi-label"
+    class="co--tooltip__trigger"
+    aria-controls="example-q18u83exodi"
+  >
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <path
+        d="M8.5 11L8.5 6.5 6.5 6.5 6.5 7.5 7.5 7.5 7.5 11 6 11 6 12 10 12 10 11zM8 3.5c-.4 0-.8.3-.8.8S7.6 5 8 5c.4 0 .8-.3.8-.8S8.4 3.5 8 3.5z"
+      ></path>
+      <path
+        d="M8,15c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S11.9,15,8,15z M8,2C4.7,2,2,4.7,2,8s2.7,6,6,6s6-2.7,6-6S11.3,2,8,2z"
+      ></path>
+    </svg>
+  </button>
+</div>
+<div
+  id="example-q18u83exodi"
+  aria-hidden="true"
+  data-floating-menu-direction="bottom"
+  class="co--tooltip"
+>
+  <span class="co--tooltip__caret" data-popper-arrow></span>
+  <div
+    class="co--tooltip__content"
+    tabindex="-1"
+    role="dialog"
+    aria-describedby="example-q18u83exodi-body"
+    aria-labelledby="example-q18u83exodi-label"
+  >
+    <p id="example-q18u83exodi-body">
+      This is some tooltip text. This box shows the maximum amount of text that
+      should appear inside. If more room is needed please use a modal instead.
+    </p>
+    
+  </div>
+  <!-- Note: focusable span allows for focus wrap feature within Tooltips -->
+  <span tabindex="0"></span>
+</div>
+
+<!-- Tooltip with Rich Text (heading and body content) but no interactive elements -->
+<div
+  id="example-mzgui9w4vv-label"
+  class="co--tooltip__label"
+  data-tooltip-trigger
+  data-tooltip-target="#example-mzgui9w4vv"
+>
+  Tooltip label
+  <button
+    aria-expanded="false"
+    aria-labelledby="example-mzgui9w4vv-label"
+    class="co--tooltip__trigger"
+    aria-controls="example-mzgui9w4vv"
+  >
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <path
+        d="M8.5 11L8.5 6.5 6.5 6.5 6.5 7.5 7.5 7.5 7.5 11 6 11 6 12 10 12 10 11zM8 3.5c-.4 0-.8.3-.8.8S7.6 5 8 5c.4 0 .8-.3.8-.8S8.4 3.5 8 3.5z"
+      ></path>
+      <path
+        d="M8,15c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S11.9,15,8,15z M8,2C4.7,2,2,4.7,2,8s2.7,6,6,6s6-2.7,6-6S11.3,2,8,2z"
+      ></path>
+    </svg>
+  </button>
+</div>
+<div
+  id="example-mzgui9w4vv"
+  aria-hidden="true"
+  data-floating-menu-direction="bottom"
+  class="co--tooltip"
+>
+  <span class="co--tooltip__caret" data-popper-arrow></span>
+  <div
+    class="co--tooltip__content"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="example-mzgui9w4vv-heading"
+    aria-describedby="example-mzgui9w4vv-body"
+  >
+    <h4 id="example-mzgui9w4vv-heading" class="co--tooltip__heading">
+      Heading within a Tooltip
+    </h4>
+    <p id="example-mzgui9w4vv-body">
+      This is some tooltip text. This box shows the maximum amount of text that
+      should appear inside. If more room is needed please use a modal instead.
+    </p>
+  </div>
+  <span tabindex="0"></span>
+</div>
+
+<!-- Tooltip without visible label (not recommended for WCAG 2.1) -->
+<div
+  id="example-cjxyge8fvqe-label"
+  class="co--tooltip__label"
+  data-tooltip-trigger
+  data-tooltip-target="#example-cjxyge8fvqe"
+>
+  Tooltip label
+  <div
+    tabindex="0"
+    aria-expanded="false"
+    aria-labelledby="example-cjxyge8fvqe-label"
+    role="button"
+    class="co--tooltip__trigger"
+    aria-controls="example-cjxyge8fvqe"
+  >
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <path
+        d="M8.5 11L8.5 6.5 6.5 6.5 6.5 7.5 7.5 7.5 7.5 11 6 11 6 12 10 12 10 11zM8 3.5c-.4 0-.8.3-.8.8S7.6 5 8 5c.4 0 .8-.3.8-.8S8.4 3.5 8 3.5z"
+      ></path>
+      <path
+        d="M8,15c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S11.9,15,8,15z M8,2C4.7,2,2,4.7,2,8s2.7,6,6,6s6-2.7,6-6S11.3,2,8,2z"
+      ></path>
+    </svg>
+  </div>
+</div>
+<div
+  id="example-cjxyge8fvqe"
+  aria-hidden="true"
+  data-floating-menu-direction="left"
+  class="co--tooltip"
+>
+  <span class="co--tooltip__caret" data-popper-arrow></span>
+  <div
+    class="co--tooltip__content"
+    tabindex="-1"
+    role="dialog"
+    aria-describedby="example-cjxyge8fvqe-body"
+    aria-label="Tooltip label"
+  >
+    <p id="example-cjxyge8fvqe-body">
+      This is some tooltip text. This box shows the maximum amount of text that
+      should appear inside. If more room is needed please use a modal instead.
+    </p>
+   
+  </div>
+  <span tabindex="0"></span>
+</div>
