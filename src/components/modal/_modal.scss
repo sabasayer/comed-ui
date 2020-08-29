@@ -3,3 +3,16 @@
 .#{$prefix}--modal-container {
   border-radius: $border-radius;
 }
+
+.#{$prefix}--modal-footer {
+  padding: $spacing-05;
+  height: initial;
+  button.#{$prefix}--btn {
+    height: initial;
+    flex: initial;
+    padding: $button-padding;
+    & +button.#{$prefix}--btn{
+        margin-left: $spacing-05;
+    }
+  }
+}
