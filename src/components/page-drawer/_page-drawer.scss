@@ -1,4 +1,4 @@
-.co--page--drawer {
+.#{$prefix}--page--drawer {
   flex: 1 1 auto;
   height: 100%;
   width: 100%;
@@ -13,7 +13,7 @@
     overflow-x: auto;
   }
 
-  > &__left {
+  > .#{$prefix}--page--drawer__left {
     grid-column: 1/2;
     overflow: hidden;
     overflow-y: auto;
@@ -26,7 +26,7 @@
     overflow-y: auto;
   }
 
-  > &__right {
+  > .#{$prefix}--page--drawer__right {
     grid-column: 3/4;
     overflow: hidden;
     overflow-y: auto;

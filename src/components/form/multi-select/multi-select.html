@@ -1,0 +1,414 @@
+<!--
+  Copyright IBM Corp. 2016, 2018
+
+  This source code is licensed under the Apache-2.0 license found in the
+  LICENSE file in the root directory of this source tree.
+-->
+<div class="co--grid">
+  <div class="co--row">
+    <div class="co--col-lg-8">
+      <div class="co--form-item">
+        <div class="co--list-box__wrapper">
+          <label class="co--label">Multi-Select label</label>
+          <div class="co--form__helper-text">Optional helper text here</div>
+          <div class="co--multi-select co--list-box co--list-box--sm">
+            <div
+              role="button"
+              class="co--list-box__field"
+              tabindex="0"
+              aria-label="open menu"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="co--list-box__label">Multi select options</span>
+              <div class="co--list-box__menu-icon">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Open menu"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="co--form-item">
+        <div class="co--list-box__wrapper">
+          <label class="co--label">Multi-Select label</label>
+          <div class="co--form__helper-text">Optional helper text here</div>
+          <div
+            class="co--multi-select co--list-box co--list-box--expanded co--multi-select--selected"
+          >
+            <div
+              role="button"
+              class="co--list-box__field"
+              tabindex="0"
+              aria-label="close menu"
+              aria-expanded="true"
+              aria-haspopup="true"
+              data-dropdown-target="#list-box-menu-1"
+            >
+              <div
+                role="button"
+                class="co--list-box__selection co--list-box__selection--multi co--tag--filter"
+                tabindex="0"
+                title="Clear all selected items"
+              >
+                1
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Clear selection"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path
+                    d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="co--list-box__label">Multi select options</span>
+              <div class="co--list-box__menu-icon">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Close menu"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path d="M8 5L13 10 12.3 10.7 8 6.4 3.7 10.7 3 10z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="co--list-box__menu"
+        role="listbox"
+        id="list-box-menu-1"
+        data-floating-menu-direction="bottom"
+      >
+        <div class="co--list-box__menu-item">
+          <div class="co--list-box__menu-item__option">
+            <div class="co--form-item co--checkbox-wrapper">
+              <label
+                title="Option 1"
+                class="co--checkbox-label"
+                for="#downshift-1-item-0"
+              >
+                <input
+                  type="checkbox"
+                  name="Option 1"
+                  readonly=""
+                  class="co--checkbox"
+                  id="downshift-1-item-0"
+                  value="on"
+                  checked
+                />
+                <span class="co--checkbox-appearance"></span>
+                <span class="co--checkbox-label-text">Option 1</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="co--list-box__menu-item">
+          <div class="co--list-box__menu-item__option">
+            <div class="co--form-item co--checkbox-wrapper">
+              <label title="Option 2" class="co--checkbox-label">
+                <input
+                  type="checkbox"
+                  name="Option 1"
+                  readonly=""
+                  class="co--checkbox"
+                  id="downshift-1-item-1"
+                  value="on"
+                />
+                <span class="co--checkbox-appearance"></span>
+                <span class="co--checkbox-label-text">Option 2</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="co--list-box__menu-item">
+          <div class="co--list-box__menu-item__option">
+            <div class="co--form-item co--checkbox-wrapper">
+              <label title="Option 3" class="co--checkbox-label">
+                <input
+                  type="checkbox"
+                  name="Option 1"
+                  readonly=""
+                  class="co--checkbox"
+                  id="downshift-1-item-2"
+                  value="on"
+                />
+                <span class="co--checkbox-appearance"></span>
+                <span class="co--checkbox-label-text">Option 3</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="co--list-box__menu-item">
+          <div class="co--list-box__menu-item__option">
+            <div class="co--form-item co--checkbox-wrapper">
+              <label title="Option 4" class="co--checkbox-label">
+                <input
+                  type="checkbox"
+                  name="Option 1"
+                  readonly=""
+                  class="co--checkbox"
+                  id="downshift-1-item-3"
+                  value="on"
+                />
+                <span class="co--checkbox-appearance"></span>
+                <span class="co--checkbox-label-text">Option 4</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="co--list-box__menu-item">
+          <div class="co--list-box__menu-item__option">
+            <div class="co--form-item co--checkbox-wrapper">
+              <label
+                title="An example option that is really long to show what should be done to handle long text"
+                class="co--checkbox-label"
+              >
+                <input
+                  type="checkbox"
+                  name="Option 1"
+                  readonly=""
+                  class="co--checkbox"
+                  id="downshift-1-item-4"
+                  value="on"
+                />
+                <span class="co--checkbox-appearance"></span>
+                <span class="co--checkbox-label-text"
+                  >An example option that is really long to show what should be
+                  done to handle long text</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="co--col-lg-8">
+      <div class="co--form-item">
+        <div class="co--list-box__wrapper">
+          <label class="co--label">Multi-Select label</label>
+          <div class="co--form__helper-text">Optional helper text here</div>
+          <div
+            class="co--multi-select co--list-box co--combo-box co--multi-select--filterable"
+          >
+            <div
+              role="button"
+              class="co--list-box__field"
+              tabindex="0"
+              aria-label="open menu"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <input class="co--text-input" placeholder="Filter..." />
+              <div class="co--list-box__menu-icon">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Open menu"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="co--form-item">
+        <div class="co--list-box__wrapper">
+          <label class="co--label">Multi-Select label</label>
+          <div class="co--form__helper-text">Optional helper text here</div>
+          <div
+            class="co--multi-select co--list-box co--list-box--xl co--list-box--expanded co--multi-select--selected co--combo-box co--multi-select--filterable"
+          >
+            <div
+              role="button"
+              class="co--list-box__field"
+              tabindex="0"
+              aria-label="close menu"
+              aria-expanded="true"
+              aria-haspopup="true"
+              data-dropdown-target="#list-box-menu-2"
+            >
+              <div
+                role="button"
+                class="co--list-box__selection co--list-box__selection--multi co--tag--filter"
+                tabindex="0"
+                title="Clear all selected items"
+              >
+                1
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Clear selection"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path
+                    d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                  ></path>
+                </svg>
+              </div>
+              <input class="co--text-input" placeholder="Filter..." />
+              <div class="co--list-box__menu-icon">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Close menu"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path d="M8 5L13 10 12.3 10.7 8 6.4 3.7 10.7 3 10z"></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="co--list-box__menu"
+              role="listbox"
+              id="list-box-menu-2"
+              data-floating-menu-direction="bottom"
+            >
+              <div class="co--list-box__menu-item">
+                <div class="co--list-box__menu-item__option">
+                  <div class="co--form-item co--checkbox-wrapper">
+                    <label title="Option 1" class="co--checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="Option 1"
+                        readonly=""
+                        class="co--checkbox"
+                        id="downshift-1-item-0"
+                        value="on"
+                        checked
+                      />
+                      <span class="co--checkbox-appearance"></span>
+                      <span class="co--checkbox-label-text">Option 1</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="co--list-box__menu-item">
+                <div class="co--list-box__menu-item__option">
+                  <div class="co--form-item co--checkbox-wrapper">
+                    <label title="Option 2" class="co--checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="Option 1"
+                        readonly=""
+                        class="co--checkbox"
+                        id="downshift-1-item-1"
+                        value="on"
+                      />
+                      <span class="co--checkbox-appearance"></span>
+                      <span class="co--checkbox-label-text">Option 2</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="co--list-box__menu-item">
+                <div class="co--list-box__menu-item__option">
+                  <div class="co--form-item co--checkbox-wrapper">
+                    <label title="Option 3" class="co--checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="Option 1"
+                        readonly=""
+                        class="co--checkbox"
+                        id="downshift-1-item-2"
+                        value="on"
+                      />
+                      <span class="co--checkbox-appearance"></span>
+                      <span class="co--checkbox-label-text">Option 3</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="co--list-box__menu-item">
+                <div class="co--list-box__menu-item__option">
+                  <div class="co--form-item co--checkbox-wrapper">
+                    <label title="Option 4" class="co--checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="Option 1"
+                        readonly=""
+                        class="co--checkbox"
+                        id="downshift-1-item-3"
+                        value="on"
+                      />
+                      <span class="co--checkbox-appearance"></span>
+                      <span class="co--checkbox-label-text">Option 4</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="co--list-box__menu-item">
+                <div class="co--list-box__menu-item__option">
+                  <div class="co--form-item co--checkbox-wrapper">
+                    <label
+                      title="An example option that is really long to show what should be done to handle long text"
+                      class="co--checkbox-label"
+                    >
+                      <input
+                        type="checkbox"
+                        name="Option 1"
+                        readonly=""
+                        class="co--checkbox"
+                        id="downshift-1-item-4"
+                        value="on"
+                      />
+                      <span class="co--checkbox-appearance"></span>
+                      <span class="co--checkbox-label-text"
+                        >An example option that is really long to show what
+                        should be done to handle long text</span
+                      >
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  Copyright IBM Corp. 2016, 2018
+
+  This source code is licensed under the Apache-2.0 license found in the
+  LICENSE file in the root directory of this source tree.
+--></div>

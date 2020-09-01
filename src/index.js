@@ -1,10 +1,12 @@
 import { siteMap } from "./site-map";
 import { initiateTooltips } from "./components/tooltip/tooltip";
 import { initiatePopovers } from "./components/popover/popover";
-import { initiateSelects } from "./components/form/select/select";
 import { initiateTabs } from "./components/tabs/tabs";
 import { initiateNotification } from "./components/notification/notification";
 import { initiateModal } from "./components/modal/modal";
+import { initiateDropdowns } from "./components/form/dropdown/dropdown";
+import { initiateMultiSelects } from "./components/form/multi-select/multi-select";
+import { initiateChips } from "./components/form/chips/chips";
 
 const container = document.getElementById("dynamic-content-container");
 
@@ -69,10 +71,12 @@ window.onload = () => {
 
         initiateTooltips();
         initiatePopovers();
-        initiateSelects();
+        initiateDropdowns();
         initiateTabs();
         initiateNotification();
         initiateModal();
+        initiateMultiSelects();
+        initiateChips();
       });
   };
 

@@ -84,6 +84,12 @@ export const handleMenuTrigger = (options) => {
         {
           name: "flip",
         },
+        {
+          name: "preventOverflow",
+          options: {
+            rootBoundary: "document",
+          },
+        },
       ],
     });
 
