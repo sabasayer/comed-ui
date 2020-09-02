@@ -1,0 +1,10 @@
+@import "carbon-components/scss/components/content-switcher/content-switcher";
+
+.#{$prefix}--content-switcher {
+  &--sm {
+    height: rem(32px);
+  }
+  &--xl {
+    height: rem(48px);
+  }
+}

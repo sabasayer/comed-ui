@@ -5,6 +5,7 @@ export const siteMap = {
   Checkbox: "components/form/checkbox/checkbox.html",
   Radio: "components/form/radio/radio.html",
   Switch: "components/form/switch/Switch.html",
+  "Toggle Buttons":"components/form/toggle-buttons/toggle-buttons.html",
   "Text input": "components/form/text-input/text-input.html",
   "Text area": "components/form/text-area/text-area.html",
   Dropdown: "components/form/dropdown/dropdown.html",

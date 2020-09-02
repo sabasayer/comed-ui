@@ -7,6 +7,7 @@ import { initiateModal } from "./components/modal/modal";
 import { initiateDropdowns } from "./components/form/dropdown/dropdown";
 import { initiateMultiSelects } from "./components/form/multi-select/multi-select";
 import { initiateChips } from "./components/form/chips/chips";
+import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
 
 const container = document.getElementById("dynamic-content-container");
 
@@ -77,6 +78,7 @@ window.onload = () => {
         initiateModal();
         initiateMultiSelects();
         initiateChips();
+        initiateToggleButtons();
       });
   };
 
