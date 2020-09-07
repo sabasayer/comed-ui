@@ -8,6 +8,8 @@ import { initiateDropdowns } from "./components/form/dropdown/dropdown";
 import { initiateMultiSelects } from "./components/form/multi-select/multi-select";
 import { initiateChips } from "./components/form/chips/chips";
 import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
+import { initiateOverflowMenus } from "./components/overflow-menu/overflow-menu";
+import { initiateDataTables } from "./components/data-table/data-table";
 
 const container = document.getElementById("dynamic-content-container");
 
@@ -73,12 +75,15 @@ window.onload = () => {
         initiateTooltips();
         initiatePopovers();
         initiateDropdowns();
+        initiateOverflowMenus();
         initiateTabs();
         initiateNotification();
         initiateModal();
         initiateMultiSelects();
         initiateChips();
         initiateToggleButtons();
+
+        initiateDataTables();
       });
   };
 

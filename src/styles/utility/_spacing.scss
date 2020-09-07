@@ -71,4 +71,8 @@ $spacings: (
   .pr-#{$spacing} {
     padding-right: $value;
   }
+
+  .grid-gap-#{$spacing} {
+    gap: $value;
+  }
 }

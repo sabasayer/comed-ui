@@ -23,6 +23,8 @@ export const handleMenuTrigger = (options) => {
     hideEvent = "clickOutside",
     offset,
     isSameWidth,
+    onOpen,
+    onClose,
   } = options;
 
   let instance = null;
@@ -47,6 +49,8 @@ export const handleMenuTrigger = (options) => {
       instance.destroy();
       instance = null;
     }
+
+    onClose(trigger, popover);
   };
 
   const checkForClickOutside = (ev) => {
@@ -95,6 +99,8 @@ export const handleMenuTrigger = (options) => {
 
     if (hideEvent == "clickOutside")
       document.addEventListener("mousedown", checkForClickOutside);
+
+    onOpen(trigger, popover);
   };
 
   trigger.addEventListener(showEvent, open);
