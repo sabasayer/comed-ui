@@ -1,4 +1,5 @@
 export const siteMap = {
+  Accordion: "components/accordion/accordion.html",
   Buttons: "components/button/button.html",
   "Side Nav": "components/side-nav/side-nav.html",
   Search: "components/search/search.html",
@@ -8,6 +9,7 @@ export const siteMap = {
   "Toggle Buttons": "components/form/toggle-buttons/toggle-buttons.html",
   "Text input": "components/form/text-input/text-input.html",
   "Text area": "components/form/text-area/text-area.html",
+  "Number Input": "components/form/number-input/number-input.html",
   Dropdown: "components/form/dropdown/dropdown.html",
   "Multi Select": "components/form/multi-select/multi-select.html",
   "Auto Complete": "components/form/autocomplete/autocomplete.html",
@@ -26,4 +28,8 @@ export const siteMap = {
   Modal: "components/modal/modal.html",
   "Data Table": "components/data-table/data-table.html",
   List: "components/list/list.html",
+  Pagination: "components/pagination/pagination.html",
+  "Proggress Indicator":
+    "components/progress-indicator/progress-indicator.html",
+  "Date Picker": "components/date-picker/date-picker.html",
 };

@@ -37,113 +37,120 @@ $unit: 0.5rem;
   }
 }
 
-.#{$prefix}--side-nav {
-  width: mini-units(6);
-  max-width: mini-units(32);
-  background-color: $ui-01;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+@mixin side-nav {
+  .#{$prefix}--side-nav {
+    width: mini-units(6);
+    max-width: mini-units(32);
+    background-color: $ui-01;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
-  transition: width 0.11s cubic-bezier(0.2, 0, 1, 0.9);
-  will-change: width;
-  overflow: hidden;
+    transition: width 0.11s cubic-bezier(0.2, 0, 1, 0.9);
+    will-change: width;
+    overflow: hidden;
 
-  &--expanded,
-  &:focus-within {
-    width: mini-units(32);
+    &--expanded,
+    &:focus-within {
+      width: mini-units(32);
+    }
+
+    &--fixed {
+      position: fixed;
+      height: 100vh;
+      z-index: z("header");
+      top: 0;
+      bottom: 0;
+      &.#{$prefix}--side-nav--left {
+        left: 0;
+      }
+      &.#{$prefix}--side-nav--right {
+        right: 0;
+      }
+    }
   }
 
-  &--fixed {
-    position: fixed;
-    height: 100vh;
-    z-index: z("header");
-    top: 0;
-    bottom: 0;
-    &.#{$prefix}--side-nav--left {
+  .#{$prefix}--side-nav__items {
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding: mini-units(2) 0 0;
+
+    @include expanded() {
+      overflow-y: auto;
+    }
+  }
+
+  .#{$prefix}--side-nav__item {
+    width: mini-units(6);
+    height: mini-units(4);
+    overflow: hidden;
+    cursor: pointer;
+
+    @include expanded() {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .#{$prefix}--side-nav__link {
+    @include focus-outline("reset");
+    @include type-style("productive-heading-01");
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: mini-units(4);
+    padding: 0 mini-units(2);
+    color: $text-01;
+
+    text-decoration: none;
+    transition: color $duration--fast-02, background-color $duration--fast-02,
+      outline $duration--fast-02;
+
+    &.#{$prefix}--side-nav__link--current,
+    &:hover {
+      background-color: $hover-ui;
+    }
+
+    &:focus {
+      @include focus-outline("outline");
+    }
+
+    &.#{$prefix}--side-nav__link--current::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
       left: 0;
+      width: 4px;
+      background-color: $interactive-01;
+      content: "";
     }
-    &.#{$prefix}--side-nav--right {
-      right: 0;
+
+    > .#{$prefix}--side-nav__link-text {
+      @include text-overflow();
+
+      user-select: none;
     }
   }
-}
 
-.#{$prefix}--side-nav__items {
-  flex: 1 1 auto;
-  overflow: hidden;
-  padding: mini-units(2) 0 0;
+  .#{$prefix}--side-nav__icon {
+    display: flex;
+    // Helpful in flex containers so the icon does not have less than the
+    // expected width
+    flex: 0 0 mini-units(2);
+    align-items: center;
+    justify-content: center;
 
-  @include expanded() {
-    overflow-y: auto;
+    margin-right: mini-units(3);
+  }
+
+  //TODO color
+  .#{$prefix}--side-nav__icon > svg {
+    width: mini-units(2);
+    height: mini-units(2);
   }
 }
 
-.#{$prefix}--side-nav__item {
-  width: mini-units(6);
-  height: mini-units(4);
-  overflow: hidden;
-  cursor: pointer;
-
-  @include expanded() {
-    width: auto;
-    height: auto;
-  }
-}
-
-.#{$prefix}--side-nav__link {
-  @include focus-outline("reset");
-  @include type-style("productive-heading-01");
-
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: mini-units(4);
-  padding: 0 mini-units(2);
-
-  text-decoration: none;
-  transition: color $duration--fast-02, background-color $duration--fast-02,
-    outline $duration--fast-02;
-
-  &.#{$prefix}--side-nav__link--current,
-  &:hover {
-    background-color: $hover-ui;
-  }
-
-  &:focus {
-    @include focus-outline("outline");
-  }
-
-  &.#{$prefix}--side-nav__link--current::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 4px;
-    background-color: $interactive-01;
-    content: "";
-  }
-
-  > .#{$prefix}--side-nav__link-text {
-    @include text-overflow();
-
-    user-select: none;
-  }
-}
-
-.#{$prefix}--side-nav__icon {
-  display: flex;
-  // Helpful in flex containers so the icon does not have less than the
-  // expected width
-  flex: 0 0 mini-units(2);
-  align-items: center;
-  justify-content: center;
-
-  margin-right: mini-units(3);
-}
-
-//TODO color
-.#{$prefix}--side-nav__icon > svg {
-  width: mini-units(2);
-  height: mini-units(2);
+@include exports("side-nav") {
+  @include side-nav;
 }

@@ -1,7 +1,5 @@
 @import "carbon-components/scss/components/search/search";
 
-@import "../../styles/globals/vars";
-
 .#{$prefix}--search {
   .#{$prefix}--search-input {
     border-top-left-radius: $border-radius;

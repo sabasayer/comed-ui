@@ -10,20 +10,24 @@ import { initiateChips } from "./components/form/chips/chips";
 import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
 import { initiateOverflowMenus } from "./components/overflow-menu/overflow-menu";
 import { initiateDataTables } from "./components/data-table/data-table";
+import { initiatePaginations } from "./components/pagination/pagination";
+import { initiateAccordions } from "./components/accordion/accordion";
 
 const container = document.getElementById("dynamic-content-container");
 
 const createLink = (name, link) => {
   let htmlString = `<div class="co--side-nav__item" >
-  <div
+  <a
     data-href="${link}"
+    data-name="${name}"
     class="co--side-nav__link"
     tabindex="1"
+    href="#${name}"
   >
     <span class="co--side-nav__link-text">
       ${name}
     </span>
-  </div>
+  </a>
 </div>`;
 
   const div = document.createElement("div");
@@ -38,9 +42,63 @@ const clearLinksCurrentState = () => {
   links.forEach((link) => link.classList.remove("co--side-nav__link--current"));
 };
 
-window.onload = () => {
-  console.log("test", siteMap);
+const handleClick = (items, link) => {
+  const href = link.getAttribute("data-href");
+  if (!href) return;
 
+  clearLinksCurrentState(items);
+
+  link.classList.add("co--side-nav__link--current");
+
+  let headers = new Headers();
+  headers.append("Content-Type", "text/html");
+
+  fetch(href, { method: "GET", headers })
+    .then((response) => {
+      return response.text();
+    })
+    .then((response) => {
+      if (!response) return;
+
+      container.innerHTML = response;
+
+      initiateAccordions();
+      initiateTooltips();
+      initiatePopovers();
+      initiateDropdowns();
+      initiateOverflowMenus();
+      initiateTabs();
+      initiateNotification();
+      initiateModal();
+      initiateMultiSelects();
+      initiateChips();
+      initiateToggleButtons();
+      initiatePaginations();
+      initiateDataTables();
+    });
+};
+
+const navigateToHash = (links) => {
+  let hash = window.location.hash;
+  if (!hash) return;
+
+  hash = decodeURI(hash.replace("#", ""));
+
+  console.log({ hash });
+
+  let firstLink = document.querySelectorAll(
+    `.co--side-nav__link[data-name="${hash}"]`
+  )[0];
+
+  if (firstLink) handleClick(links, firstLink);
+  else {
+    firstLink = document.querySelectorAll(".co--side-nav__link")[0];
+
+    if (firstLink) handleClick(links, firstLink);
+  }
+};
+
+window.onload = () => {
   const items = document.querySelector(".co--side-nav__items");
   Object.entries(siteMap).forEach((entry) => {
     items.append(createLink(entry[0], entry[1]));
@@ -52,46 +110,9 @@ window.onload = () => {
     wrapper.className = `theme-${ev.target.value}`;
   });
 
-  const handleClick = (link) => {
-    const href = link.getAttribute("data-href");
-    if (!href) return;
-
-    clearLinksCurrentState(items);
-
-    link.classList.add("co--side-nav__link--current");
-
-    let headers = new Headers();
-    headers.append("Content-Type", "text/html");
-
-    fetch(href, { method: "GET", headers })
-      .then((response) => {
-        return response.text();
-      })
-      .then((response) => {
-        if (!response) return;
-
-        container.innerHTML = response;
-
-        initiateTooltips();
-        initiatePopovers();
-        initiateDropdowns();
-        initiateOverflowMenus();
-        initiateTabs();
-        initiateNotification();
-        initiateModal();
-        initiateMultiSelects();
-        initiateChips();
-        initiateToggleButtons();
-
-        initiateDataTables();
-      });
-  };
+  navigateToHash(items);
 
   document.querySelectorAll(".co--side-nav__link").forEach((link) => {
-    link.addEventListener("click", (ev) => handleClick(link));
+    link.addEventListener("click", (ev) => handleClick(items, link));
   });
-
-  const firstLink = document.querySelectorAll(".co--side-nav__link")[0];
-
-  if (firstLink) handleClick(firstLink);
 };

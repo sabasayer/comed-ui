@@ -50,7 +50,7 @@ export const handleMenuTrigger = (options) => {
       instance = null;
     }
 
-    onClose(trigger, popover);
+    if (onClose) onClose(trigger, popover);
   };
 
   const checkForClickOutside = (ev) => {
@@ -100,7 +100,7 @@ export const handleMenuTrigger = (options) => {
     if (hideEvent == "clickOutside")
       document.addEventListener("mousedown", checkForClickOutside);
 
-    onOpen(trigger, popover);
+    if (onOpen) onOpen(trigger, popover);
   };
 
   trigger.addEventListener(showEvent, open);

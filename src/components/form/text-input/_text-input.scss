@@ -1,7 +1,5 @@
 @import "carbon-components/scss/components/text-input/text-input";
 
-@import "../../../styles/globals/vars";
-
 .#{$prefix}--text-input {
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
