@@ -1,4 +1,4 @@
-@import "./reset.scss";
+@import "carbon-components/scss/globals/scss/css--reset";
 
 @import "./globals";
 @import "./utility";
@@ -13,11 +13,12 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
 }
 
 #app-wrapper {
-  background-color:$ui-background;
+  background-color: $ui-background;
   color: $text-01;
   height: 100vh;
   width: 100vw;

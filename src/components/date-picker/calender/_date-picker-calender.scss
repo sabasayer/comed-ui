@@ -1,0 +1,53 @@
+$unitSize: 2.5rem;
+
+@mixin calendar-unit {
+  width: $unitSize;
+  height: $unitSize;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: $hover-ui;
+  }
+}
+
+.#{$prefix}--date-picker-calender {
+  background-color: $ui-01;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.#{$prefix}--date-picker-calender__body {
+  padding: $spacing-04;
+}
+
+.#{$prefix}--date-picker-calender__days {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 7 * $unitSize;
+  .#{$prefix}--date-picker-calender__day {
+    @include calendar-unit();
+    @include type-style("body-short-01");
+  }
+}
+
+.#{$prefix}--date-picker-calender__navigation {
+  display: flex;
+  .#{$prefix}--date-picker-calender__prev-month,
+  .#{$prefix}--date-picker-calender__next-month {
+    @include calendar-unit();
+  }
+}
+
+.#{$prefix}--date-picker-calender__month,
+.#{$prefix}--date-picker-calender__year {
+  @include reset;
+  background-color: transparent;
+  height: $unitSize;
+}
+
+.#{$prefix}--date-picker-calender__year {
+  width: 7ch;
+  margin-left: $spacing-05;
+}
