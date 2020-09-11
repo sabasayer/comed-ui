@@ -32,4 +32,5 @@ export const siteMap = {
   "Proggress Indicator":
     "components/progress-indicator/progress-indicator.html",
   "Date Picker": "components/date-picker/date-picker.html",
+  Loading: "components/loading/loading.html",
 };

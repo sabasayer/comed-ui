@@ -8,14 +8,17 @@
 
 html,
 body {
+  @include reset;
+  @include type-style("body-short-01");
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 #app-wrapper {
-  background-color: var(--cds-ui-background, #ffffff);
-  color: var(--cds-text-01, #161616);
+  background-color:$ui-background;
+  color: $text-01;
   height: 100vh;
   width: 100vw;
   overflow: hidden;

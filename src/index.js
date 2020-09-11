@@ -78,7 +78,7 @@ const handleClick = (items, link) => {
     });
 };
 
-const navigateToHash = (links) => {
+const findHashLink = () => {
   let hash = window.location.hash;
   if (!hash) return;
 
@@ -86,13 +86,17 @@ const navigateToHash = (links) => {
 
   console.log({ hash });
 
-  let firstLink = document.querySelectorAll(
+  return document.querySelectorAll(
     `.co--side-nav__link[data-name="${hash}"]`
   )[0];
+};
 
-  if (firstLink) handleClick(links, firstLink);
+const navigateToHash = (links) => {
+  let hashLink = findHashLink();
+
+  if (hashLink) handleClick(links, hashLink);
   else {
-    firstLink = document.querySelectorAll(".co--side-nav__link")[0];
+    let firstLink = document.querySelectorAll(".co--side-nav__link")[0];
 
     if (firstLink) handleClick(links, firstLink);
   }
