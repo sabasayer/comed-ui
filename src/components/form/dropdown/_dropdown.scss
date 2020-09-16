@@ -1,7 +1,5 @@
 @import "carbon-components/scss/components/dropdown/dropdown";
 
-@import "../../../styles/globals/vars";
-
 .#{$prefix}--dropdown {
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;

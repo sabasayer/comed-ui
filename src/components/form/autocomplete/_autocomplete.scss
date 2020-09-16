@@ -1,7 +1,5 @@
 @import "carbon-components/scss/components/combo-box/combo-box";
 
-@import "../../../styles/globals/vars";
-
 .#{$prefix}--combo-box {
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;

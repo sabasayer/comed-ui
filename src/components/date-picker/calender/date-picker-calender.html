@@ -1,99 +1,1455 @@
-<div class="co--date-picker-calender">
-  <div class="co--date-picker-calender__header">11.09.2020</div>
-  <div class="co--date-picker-calender__body">
-    <div class="co--date-picker-calender__navigation">
-      <div class="co--date-picker-calender__prev-month">
-        <svg
-          focusable="false"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          aria-hidden="true"
-        >
-          <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
-        </svg>
-      </div>
-      <div class="d-flex flex-grow justify-center">
-        <select name="month" class="co--date-picker-calender__month">
-          <option value="1" selected>Ocak</option>
-          <option value="2">Şubat</option>
-          <option value="3">Mart</option>
-        </select>
+<div class="co--grid">
+  <div class="co--row">
+    <!--Default-->
 
-        <input
-          type="number"
-          name="year"
-          class="co--date-picker-calender__year"
-          value="2020"
-        />
-      </div>
+    <div class="co--col-lg">
+      <h6>Default</h6>
 
-      <div class="co--date-picker-calender__next-month">
-        <svg
-          focusable="false"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          aria-hidden="true"
-        >
-          <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
-        </svg>
+      <div class="co--date-picker-calender">
+        <div class="co--date-picker-calender__header">
+          <h5>25 Eyl 2020</h5>
+        </div>
+        <div class="co--date-picker-calender__body">
+          <div class="co--date-picker-calender__navigation">
+            <div class="co--date-picker-calender__prev-month">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__inputs">
+              <select name="month" class="co--date-picker-calender__month">
+                <option value="1" selected>Ocak</option>
+                <option value="2">Şubat</option>
+                <option value="3">Mart</option>
+              </select>
+
+              <input
+                type="number"
+                name="year"
+                class="co--date-picker-calender__year"
+                value="2020"
+              />
+            </div>
+
+            <div class="co--date-picker-calender__next-month">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="co--date-picker-calender__content">
+            <div class="co--date-picker-calender__weekdays">
+              <span class="co--date-picker-calender__weekday">Pts</span>
+              <span class="co--date-picker-calender__weekday">Sal</span>
+              <span class="co--date-picker-calender__weekday">Çar</span>
+              <span class="co--date-picker-calender__weekday">Per</span>
+              <span class="co--date-picker-calender__weekday">Cum</span>
+              <span class="co--date-picker-calender__weekday">Cts</span>
+              <span class="co--date-picker-calender__weekday">Paz</span>
+            </div>
+            <div class="co--date-picker-calender__days">
+              <span class="co--date-picker-calender__day prev-month-day"
+                >30</span
+              >
+              <span class="co--date-picker-calender__day prev-month-day"
+                >31</span
+              >
+              <span class="co--date-picker-calender__day">1</span>
+              <span class="co--date-picker-calender__day">2</span>
+              <span class="co--date-picker-calender__day">3</span>
+              <span class="co--date-picker-calender__day">4</span>
+              <span class="co--date-picker-calender__day">5</span>
+              <span class="co--date-picker-calender__day">6</span>
+              <span class="co--date-picker-calender__day">7</span>
+              <span class="co--date-picker-calender__day">8</span>
+              <span class="co--date-picker-calender__day">9</span>
+              <span class="co--date-picker-calender__day">10</span>
+              <span class="co--date-picker-calender__day">11</span>
+              <span class="co--date-picker-calender__day">12</span>
+              <span class="co--date-picker-calender__day">13</span>
+              <span class="co--date-picker-calender__day">14</span>
+              <span class="co--date-picker-calender__day">15</span>
+              <span class="co--date-picker-calender__day today">16</span>
+              <span class="co--date-picker-calender__day">17</span>
+              <span class="co--date-picker-calender__day">18</span>
+              <span class="co--date-picker-calender__day">19</span>
+              <span class="co--date-picker-calender__day">20</span>
+              <span class="co--date-picker-calender__day">21</span>
+              <span class="co--date-picker-calender__day">22</span>
+              <span class="co--date-picker-calender__day">23</span>
+              <span class="co--date-picker-calender__day">24</span>
+              <span class="co--date-picker-calender__day selected">25</span>
+              <span class="co--date-picker-calender__day">26</span>
+              <span class="co--date-picker-calender__day">27</span>
+              <span class="co--date-picker-calender__day">28</span>
+              <span class="co--date-picker-calender__day">29</span>
+              <span class="co--date-picker-calender__day">30</span>
+              <span class="co--date-picker-calender__day next-month-day"
+                >1</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >2</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >3</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >4</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >5</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >6</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >7</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >8</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >9</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >10</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="co--date-picker-calender__content">
-      <div class="co--date-picker-calender__weekdays"></div>
-      <div class="co--date-picker-calender__days">
-        <span class="co--date-picker-calender__day">30</span>
-        <span class="co--date-picker-calender__day">31</span>
-        <span class="co--date-picker-calender__day">1</span>
-        <span class="co--date-picker-calender__day">2</span>
-        <span class="co--date-picker-calender__day">3</span>
-        <span class="co--date-picker-calender__day">4</span>
-        <span class="co--date-picker-calender__day">5</span>
-        <span class="co--date-picker-calender__day">6</span>
-        <span class="co--date-picker-calender__day">7</span>
-        <span class="co--date-picker-calender__day">8</span>
-        <span class="co--date-picker-calender__day">9</span>
-        <span class="co--date-picker-calender__day">10</span>
-        <span class="co--date-picker-calender__day">11</span>
-        <span class="co--date-picker-calender__day">12</span>
-        <span class="co--date-picker-calender__day">13</span>
-        <span class="co--date-picker-calender__day">14</span>
-        <span class="co--date-picker-calender__day">15</span>
-        <span class="co--date-picker-calender__day">16</span>
-        <span class="co--date-picker-calender__day">17</span>
-        <span class="co--date-picker-calender__day">18</span>
-        <span class="co--date-picker-calender__day">19</span>
-        <span class="co--date-picker-calender__day">20</span>
-        <span class="co--date-picker-calender__day">21</span>
-        <span class="co--date-picker-calender__day">22</span>
-        <span class="co--date-picker-calender__day">23</span>
-        <span class="co--date-picker-calender__day">24</span>
-        <span class="co--date-picker-calender__day">25</span>
-        <span class="co--date-picker-calender__day">26</span>
-        <span class="co--date-picker-calender__day">27</span>
-        <span class="co--date-picker-calender__day">28</span>
-        <span class="co--date-picker-calender__day">29</span>
-        <span class="co--date-picker-calender__day">30</span>
-        <span class="co--date-picker-calender__day">1</span>
-        <span class="co--date-picker-calender__day">2</span>
-        <span class="co--date-picker-calender__day">3</span>
-        <span class="co--date-picker-calender__day">4</span>
-        <span class="co--date-picker-calender__day">5</span>
-        <span class="co--date-picker-calender__day">6</span>
-        <span class="co--date-picker-calender__day">7</span>
-        <span class="co--date-picker-calender__day">8</span>
-        <span class="co--date-picker-calender__day">9</span>
-        <span class="co--date-picker-calender__day">10</span>
+    <!--With Time-->
+
+    <div class="co--col-lg">
+      <h6>Date Time</h6>
+
+      <div class="co--date-picker-calender">
+        <div class="co--date-picker-calender__header">
+          <h5>25 Eyl 2020 - 02:00</h5>
+        </div>
+        <div class="co--date-picker-calender__body">
+          <div class="co--date-picker-calender__navigation">
+            <div class="co--date-picker-calender__prev-month">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__inputs">
+              <select name="month" class="co--date-picker-calender__month">
+                <option value="1" selected>Ocak</option>
+                <option value="2">Şubat</option>
+                <option value="3">Mart</option>
+              </select>
+
+              <input
+                type="number"
+                name="year"
+                class="co--date-picker-calender__year"
+                value="2020"
+              />
+            </div>
+
+            <div class="co--date-picker-calender__next-month">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="co--date-picker-calender__content">
+            <div class="co--date-picker-calender__weekdays">
+              <span class="co--date-picker-calender__weekday">Pts</span>
+              <span class="co--date-picker-calender__weekday">Sal</span>
+              <span class="co--date-picker-calender__weekday">Çar</span>
+              <span class="co--date-picker-calender__weekday">Per</span>
+              <span class="co--date-picker-calender__weekday">Cum</span>
+              <span class="co--date-picker-calender__weekday">Cts</span>
+              <span class="co--date-picker-calender__weekday">Paz</span>
+            </div>
+            <div class="co--date-picker-calender__days">
+              <span class="co--date-picker-calender__day prev-month-day"
+                >30</span
+              >
+              <span class="co--date-picker-calender__day prev-month-day"
+                >31</span
+              >
+              <span class="co--date-picker-calender__day">1</span>
+              <span class="co--date-picker-calender__day">2</span>
+              <span class="co--date-picker-calender__day">3</span>
+              <span class="co--date-picker-calender__day">4</span>
+              <span class="co--date-picker-calender__day">5</span>
+              <span class="co--date-picker-calender__day">6</span>
+              <span class="co--date-picker-calender__day">7</span>
+              <span class="co--date-picker-calender__day">8</span>
+              <span class="co--date-picker-calender__day">9</span>
+              <span class="co--date-picker-calender__day">10</span>
+              <span class="co--date-picker-calender__day">11</span>
+              <span class="co--date-picker-calender__day">12</span>
+              <span class="co--date-picker-calender__day">13</span>
+              <span class="co--date-picker-calender__day">14</span>
+              <span class="co--date-picker-calender__day">15</span>
+              <span class="co--date-picker-calender__day today">16</span>
+              <span class="co--date-picker-calender__day">17</span>
+              <span class="co--date-picker-calender__day">18</span>
+              <span class="co--date-picker-calender__day">19</span>
+              <span class="co--date-picker-calender__day">20</span>
+              <span class="co--date-picker-calender__day">21</span>
+              <span class="co--date-picker-calender__day">22</span>
+              <span class="co--date-picker-calender__day">23</span>
+              <span class="co--date-picker-calender__day">24</span>
+              <span class="co--date-picker-calender__day selected">25</span>
+              <span class="co--date-picker-calender__day">26</span>
+              <span class="co--date-picker-calender__day">27</span>
+              <span class="co--date-picker-calender__day">28</span>
+              <span class="co--date-picker-calender__day">29</span>
+              <span class="co--date-picker-calender__day">30</span>
+              <span class="co--date-picker-calender__day next-month-day"
+                >1</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >2</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >3</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >4</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >5</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >6</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >7</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >8</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >9</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >10</span
+              >
+            </div>
+          </div>
+
+          <div class="co--date-picker-calender__time">
+            <div class="co--date-picker-calender__prev-hour">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__hours">
+              <div class="co--date-picker-calender__hour">00</div>
+              <div class="co--date-picker-calender__hour">01</div>
+              <div class="co--date-picker-calender__hour selected">02</div>
+              <div class="co--date-picker-calender__hour">03</div>
+              <div class="co--date-picker-calender__hour">04</div>
+              <div class="co--date-picker-calender__hour">05</div>
+              <div class="co--date-picker-calender__hour">06</div>
+              <div class="co--date-picker-calender__hour">07</div>
+              <div class="co--date-picker-calender__hour">08</div>
+              <div class="co--date-picker-calender__hour">09</div>
+              <div class="co--date-picker-calender__hour">10</div>
+              <div class="co--date-picker-calender__hour">11</div>
+              <div class="co--date-picker-calender__hour">12</div>
+              <div class="co--date-picker-calender__hour">13</div>
+              <div class="co--date-picker-calender__hour">14</div>
+              <div class="co--date-picker-calender__hour">15</div>
+              <div class="co--date-picker-calender__hour">16</div>
+              <div class="co--date-picker-calender__hour">17</div>
+              <div class="co--date-picker-calender__hour">18</div>
+              <div class="co--date-picker-calender__hour">19</div>
+              <div class="co--date-picker-calender__hour">20</div>
+              <div class="co--date-picker-calender__hour">21</div>
+              <div class="co--date-picker-calender__hour">22</div>
+              <div class="co--date-picker-calender__hour">23</div>
+            </div>
+            <div class="co--date-picker-calender__next-hour">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="co--date-picker-calender__time">
+            <div class="co--date-picker-calender__prev-minute">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__minutes">
+              <div class="co--date-picker-calender__minute">00</div>
+              <div class="co--date-picker-calender__minute">15</div>
+              <div class="co--date-picker-calender__minute selected">30</div>
+              <div class="co--date-picker-calender__minute">45</div>
+              <div class="co--date-picker-calender__minute">60</div>
+            </div>
+            <div class="co--date-picker-calender__next-minute">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg">
+      <h6>Time</h6>
+
+      <div class="co--date-picker-calender">
+        <div class="co--date-picker-calender__header">
+          <h5>02:00</h5>
+        </div>
+        <div class="co--date-picker-calender__body">
+          
+          <div class="co--date-picker-calender__time">
+            <div class="co--date-picker-calender__prev-hour">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__hours">
+              <div class="co--date-picker-calender__hour">00</div>
+              <div class="co--date-picker-calender__hour">01</div>
+              <div class="co--date-picker-calender__hour selected">02</div>
+              <div class="co--date-picker-calender__hour">03</div>
+              <div class="co--date-picker-calender__hour">04</div>
+              <div class="co--date-picker-calender__hour">05</div>
+              <div class="co--date-picker-calender__hour">06</div>
+              <div class="co--date-picker-calender__hour">07</div>
+              <div class="co--date-picker-calender__hour">08</div>
+              <div class="co--date-picker-calender__hour">09</div>
+              <div class="co--date-picker-calender__hour">10</div>
+              <div class="co--date-picker-calender__hour">11</div>
+              <div class="co--date-picker-calender__hour">12</div>
+              <div class="co--date-picker-calender__hour">13</div>
+              <div class="co--date-picker-calender__hour">14</div>
+              <div class="co--date-picker-calender__hour">15</div>
+              <div class="co--date-picker-calender__hour">16</div>
+              <div class="co--date-picker-calender__hour">17</div>
+              <div class="co--date-picker-calender__hour">18</div>
+              <div class="co--date-picker-calender__hour">19</div>
+              <div class="co--date-picker-calender__hour">20</div>
+              <div class="co--date-picker-calender__hour">21</div>
+              <div class="co--date-picker-calender__hour">22</div>
+              <div class="co--date-picker-calender__hour">23</div>
+            </div>
+            <div class="co--date-picker-calender__next-hour">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="co--date-picker-calender__time">
+            <div class="co--date-picker-calender__prev-minute">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__minutes">
+              <div class="co--date-picker-calender__minute">00</div>
+              <div class="co--date-picker-calender__minute">15</div>
+              <div class="co--date-picker-calender__minute selected">30</div>
+              <div class="co--date-picker-calender__minute">45</div>
+              <div class="co--date-picker-calender__minute">60</div>
+            </div>
+            <div class="co--date-picker-calender__next-minute">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="co--row mt-5">
+    <div class="co--col-lg">
+      <h6>With Action Bar</h6>
+
+      <div class="co--date-picker-calender">
+        <div class="co--date-picker-calender__header">
+          <h5>12 Eyl 2020</h5>
+        </div>
+        <div class="co--date-picker-calender__body">
+          <div class="co--date-picker-calender__navigation">
+            <div class="co--date-picker-calender__prev-month">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+              </svg>
+            </div>
+            <div class="co--date-picker-calender__inputs">
+              <select name="month" class="co--date-picker-calender__month">
+                <option value="1" selected>Ocak</option>
+                <option value="2">Şubat</option>
+                <option value="3">Mart</option>
+              </select>
+
+              <input
+                type="number"
+                name="year"
+                class="co--date-picker-calender__year"
+                value="2020"
+              />
+            </div>
+
+            <div class="co--date-picker-calender__next-month">
+              <svg
+                focusable="false"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="co--date-picker-calender__content">
+            <div class="co--date-picker-calender__weekdays">
+              <span class="co--date-picker-calender__weekday">Pts</span>
+              <span class="co--date-picker-calender__weekday">Sal</span>
+              <span class="co--date-picker-calender__weekday">Çar</span>
+              <span class="co--date-picker-calender__weekday">Per</span>
+              <span class="co--date-picker-calender__weekday">Cum</span>
+              <span class="co--date-picker-calender__weekday">Cts</span>
+              <span class="co--date-picker-calender__weekday">Paz</span>
+            </div>
+            <div class="co--date-picker-calender__days">
+              <span class="co--date-picker-calender__day prev-month-day"
+                >30</span
+              >
+              <span class="co--date-picker-calender__day prev-month-day"
+                >31</span
+              >
+              <span class="co--date-picker-calender__day">1</span>
+              <span class="co--date-picker-calender__day">2</span>
+              <span class="co--date-picker-calender__day">3</span>
+              <span class="co--date-picker-calender__day">4</span>
+              <span class="co--date-picker-calender__day">5</span>
+              <span class="co--date-picker-calender__day">6</span>
+              <span class="co--date-picker-calender__day">7</span>
+              <span class="co--date-picker-calender__day">8</span>
+              <span class="co--date-picker-calender__day">9</span>
+              <span class="co--date-picker-calender__day">10</span>
+              <span class="co--date-picker-calender__day">11</span>
+              <span class="co--date-picker-calender__day">12</span>
+              <span class="co--date-picker-calender__day">13</span>
+              <span class="co--date-picker-calender__day">14</span>
+              <span class="co--date-picker-calender__day">15</span>
+              <span class="co--date-picker-calender__day today">16</span>
+              <span class="co--date-picker-calender__day">17</span>
+              <span class="co--date-picker-calender__day">18</span>
+              <span class="co--date-picker-calender__day">19</span>
+              <span class="co--date-picker-calender__day">20</span>
+              <span class="co--date-picker-calender__day">21</span>
+              <span class="co--date-picker-calender__day">22</span>
+              <span class="co--date-picker-calender__day">23</span>
+              <span class="co--date-picker-calender__day">24</span>
+              <span class="co--date-picker-calender__day selected">25</span>
+              <span class="co--date-picker-calender__day">26</span>
+              <span class="co--date-picker-calender__day">27</span>
+              <span class="co--date-picker-calender__day">28</span>
+              <span class="co--date-picker-calender__day">29</span>
+              <span class="co--date-picker-calender__day">30</span>
+              <span class="co--date-picker-calender__day next-month-day"
+                >1</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >2</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >3</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >4</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >5</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >6</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >7</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >8</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >9</span
+              >
+              <span class="co--date-picker-calender__day next-month-day"
+                >10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="co--date-picker-calender__footer">
+          <button
+            class="co--btn co--btn--ghost co--btn--sm co--btn--icon-only"
+            type="button"
+          >
+            <svg
+              focusable="false"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+              ></path>
+              <title>Close</title>
+            </svg>
+          </button>
+
+          <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+            Şimdi
+          </button>
+
+          <button
+            class="co--btn co--btn--ghost co--btn--sm co--btn--icon-only"
+            type="button"
+          >
+            <svg
+              focusable="false"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M13 24L4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24z"
+              ></path>
+              <title>Checkmark</title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="co--col-lg">
+      <h6>Date Range</h6>
+
+      <div class="co--date-picker-calender">
+        <div class="co--date-picker-calender__header">
+          <h5 class="flex-grow">25 Eyl 2020</h5>
+          <h5 class="flex-grow">07 Ek 2020</h5>
+        </div>
+        <div class="co--date-range-picker-calender__body">
+          <div class="co--date-picker-calender__body">
+            <div class="co--date-picker-calender__navigation">
+              <div class="co--date-picker-calender__prev-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__inputs">
+                <select name="month" class="co--date-picker-calender__month">
+                  <option value="1" selected>Ocak</option>
+                  <option value="2">Şubat</option>
+                  <option value="3">Mart</option>
+                </select>
+
+                <input
+                  type="number"
+                  name="year"
+                  class="co--date-picker-calender__year"
+                  value="2020"
+                />
+              </div>
+
+              <div class="co--date-picker-calender__next-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="co--date-picker-calender__content">
+              <div class="co--date-picker-calender__weekdays">
+                <span class="co--date-picker-calender__weekday">Pts</span>
+                <span class="co--date-picker-calender__weekday">Sal</span>
+                <span class="co--date-picker-calender__weekday">Çar</span>
+                <span class="co--date-picker-calender__weekday">Per</span>
+                <span class="co--date-picker-calender__weekday">Cum</span>
+                <span class="co--date-picker-calender__weekday">Cts</span>
+                <span class="co--date-picker-calender__weekday">Paz</span>
+              </div>
+              <div class="co--date-picker-calender__days">
+                <span class="co--date-picker-calender__day prev-month-day"
+                  >30</span
+                >
+                <span class="co--date-picker-calender__day prev-month-day"
+                  >31</span
+                >
+                <span class="co--date-picker-calender__day">1</span>
+                <span class="co--date-picker-calender__day">2</span>
+                <span class="co--date-picker-calender__day">3</span>
+                <span class="co--date-picker-calender__day">4</span>
+                <span class="co--date-picker-calender__day">5</span>
+                <span class="co--date-picker-calender__day">6</span>
+                <span class="co--date-picker-calender__day">7</span>
+                <span class="co--date-picker-calender__day">8</span>
+                <span class="co--date-picker-calender__day">9</span>
+                <span class="co--date-picker-calender__day">10</span>
+                <span class="co--date-picker-calender__day">11</span>
+                <span class="co--date-picker-calender__day">12</span>
+                <span class="co--date-picker-calender__day">13</span>
+                <span class="co--date-picker-calender__day">14</span>
+                <span class="co--date-picker-calender__day">15</span>
+                <span class="co--date-picker-calender__day today">16</span>
+                <span class="co--date-picker-calender__day">17</span>
+                <span class="co--date-picker-calender__day">18</span>
+                <span class="co--date-picker-calender__day">19</span>
+                <span class="co--date-picker-calender__day">20</span>
+                <span class="co--date-picker-calender__day">21</span>
+                <span class="co--date-picker-calender__day">22</span>
+                <span class="co--date-picker-calender__day">23</span>
+                <span class="co--date-picker-calender__day">24</span>
+                <span class="co--date-picker-calender__day selected">25</span>
+                <span class="co--date-picker-calender__day in-range">26</span>
+                <span class="co--date-picker-calender__day in-range">27</span>
+                <span class="co--date-picker-calender__day in-range">28</span>
+                <span class="co--date-picker-calender__day in-range">29</span>
+                <span class="co--date-picker-calender__day in-range">30</span>
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >1</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >2</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >3</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >4</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >5</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >6</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >7</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >8</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >9</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >10</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="co--date-picker-calender__body">
+            <div class="co--date-picker-calender__navigation">
+              <div class="co--date-picker-calender__prev-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__inputs">
+                <select name="month" class="co--date-picker-calender__month">
+                  <option value="1" selected>Ocak</option>
+                  <option value="2">Şubat</option>
+                  <option value="3">Mart</option>
+                </select>
+
+                <input
+                  type="number"
+                  name="year"
+                  class="co--date-picker-calender__year"
+                  value="2020"
+                />
+              </div>
+
+              <div class="co--date-picker-calender__next-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="co--date-picker-calender__content">
+              <div class="co--date-picker-calender__weekdays">
+                <span class="co--date-picker-calender__weekday">Pts</span>
+                <span class="co--date-picker-calender__weekday">Sal</span>
+                <span class="co--date-picker-calender__weekday">Çar</span>
+                <span class="co--date-picker-calender__weekday">Per</span>
+                <span class="co--date-picker-calender__weekday">Cum</span>
+                <span class="co--date-picker-calender__weekday">Cts</span>
+                <span class="co--date-picker-calender__weekday">Paz</span>
+              </div>
+              <div class="co--date-picker-calender__days">
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >27</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >28</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >29</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >30</span
+                >
+                <span class="co--date-picker-calender__day in-range">1</span>
+                <span class="co--date-picker-calender__day in-range">2</span>
+                <span class="co--date-picker-calender__day in-range">3</span>
+                <span class="co--date-picker-calender__day in-range">4</span>
+                <span class="co--date-picker-calender__day in-range">5</span>
+                <span class="co--date-picker-calender__day in-range">6</span>
+                <span class="co--date-picker-calender__day selected">7</span>
+                <span class="co--date-picker-calender__day">8</span>
+                <span class="co--date-picker-calender__day">9</span>
+                <span class="co--date-picker-calender__day">10</span>
+                <span class="co--date-picker-calender__day">11</span>
+                <span class="co--date-picker-calender__day">12</span>
+                <span class="co--date-picker-calender__day">13</span>
+                <span class="co--date-picker-calender__day">14</span>
+                <span class="co--date-picker-calender__day">15</span>
+                <span class="co--date-picker-calender__day">16</span>
+                <span class="co--date-picker-calender__day">17</span>
+                <span class="co--date-picker-calender__day">18</span>
+                <span class="co--date-picker-calender__day">19</span>
+                <span class="co--date-picker-calender__day">20</span>
+                <span class="co--date-picker-calender__day">21</span>
+                <span class="co--date-picker-calender__day">22</span>
+                <span class="co--date-picker-calender__day">23</span>
+                <span class="co--date-picker-calender__day">24</span>
+                <span class="co--date-picker-calender__day">25</span>
+                <span class="co--date-picker-calender__day">26</span>
+                <span class="co--date-picker-calender__day">27</span>
+                <span class="co--date-picker-calender__day">28</span>
+                <span class="co--date-picker-calender__day">29</span>
+                <span class="co--date-picker-calender__day">30</span>
+                <span class="co--date-picker-calender__day">31</span>
+                <span class="co--date-picker-calender__day next-month-day"
+                  >1</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >2</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >3</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >4</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >5</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >6</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >7</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="co--date-picker-calender__footer"></div>
+
+  <div class="co--row mt-5">
+    <div class="co--col-lg">
+      <h6>Date Time Range</h6>
+
+      <div class="co--date-picker-calender">
+        <div class="co--date-picker-calender__header">
+          <h5 class="flex-grow">25 Eyl 2020 - 02:00</h5>
+          <h5 class="flex-grow">07 Ek 2020 - 14:00</h5>
+        </div>
+        <div class="co--date-range-picker-calender__body">
+          <div class="co--date-picker-calender__body">
+            <div class="co--date-picker-calender__navigation">
+              <div class="co--date-picker-calender__prev-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__inputs">
+                <select name="month" class="co--date-picker-calender__month">
+                  <option value="1" selected>Ocak</option>
+                  <option value="2">Şubat</option>
+                  <option value="3">Mart</option>
+                </select>
+
+                <input
+                  type="number"
+                  name="year"
+                  class="co--date-picker-calender__year"
+                  value="2020"
+                />
+              </div>
+
+              <div class="co--date-picker-calender__next-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="co--date-picker-calender__content">
+              <div class="co--date-picker-calender__weekdays">
+                <span class="co--date-picker-calender__weekday">Pts</span>
+                <span class="co--date-picker-calender__weekday">Sal</span>
+                <span class="co--date-picker-calender__weekday">Çar</span>
+                <span class="co--date-picker-calender__weekday">Per</span>
+                <span class="co--date-picker-calender__weekday">Cum</span>
+                <span class="co--date-picker-calender__weekday">Cts</span>
+                <span class="co--date-picker-calender__weekday">Paz</span>
+              </div>
+              <div class="co--date-picker-calender__days">
+                <span class="co--date-picker-calender__day prev-month-day"
+                  >30</span
+                >
+                <span class="co--date-picker-calender__day prev-month-day"
+                  >31</span
+                >
+                <span class="co--date-picker-calender__day">1</span>
+                <span class="co--date-picker-calender__day">2</span>
+                <span class="co--date-picker-calender__day">3</span>
+                <span class="co--date-picker-calender__day">4</span>
+                <span class="co--date-picker-calender__day">5</span>
+                <span class="co--date-picker-calender__day">6</span>
+                <span class="co--date-picker-calender__day">7</span>
+                <span class="co--date-picker-calender__day">8</span>
+                <span class="co--date-picker-calender__day">9</span>
+                <span class="co--date-picker-calender__day">10</span>
+                <span class="co--date-picker-calender__day">11</span>
+                <span class="co--date-picker-calender__day">12</span>
+                <span class="co--date-picker-calender__day">13</span>
+                <span class="co--date-picker-calender__day">14</span>
+                <span class="co--date-picker-calender__day">15</span>
+                <span class="co--date-picker-calender__day today">16</span>
+                <span class="co--date-picker-calender__day">17</span>
+                <span class="co--date-picker-calender__day">18</span>
+                <span class="co--date-picker-calender__day">19</span>
+                <span class="co--date-picker-calender__day">20</span>
+                <span class="co--date-picker-calender__day">21</span>
+                <span class="co--date-picker-calender__day">22</span>
+                <span class="co--date-picker-calender__day">23</span>
+                <span class="co--date-picker-calender__day">24</span>
+                <span class="co--date-picker-calender__day selected">25</span>
+                <span class="co--date-picker-calender__day in-range">26</span>
+                <span class="co--date-picker-calender__day in-range">27</span>
+                <span class="co--date-picker-calender__day in-range">28</span>
+                <span class="co--date-picker-calender__day in-range">29</span>
+                <span class="co--date-picker-calender__day in-range">30</span>
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >1</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >2</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >3</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >4</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >5</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >6</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range next-month-day"
+                  >7</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >8</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >9</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >10</span
+                >
+              </div>
+            </div>
+            <div class="co--date-picker-calender__time">
+              <div class="co--date-picker-calender__prev-hour">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__hours">
+                <div class="co--date-picker-calender__hour">00</div>
+                <div class="co--date-picker-calender__hour">01</div>
+                <div class="co--date-picker-calender__hour selected">02</div>
+                <div class="co--date-picker-calender__hour">03</div>
+                <div class="co--date-picker-calender__hour">04</div>
+                <div class="co--date-picker-calender__hour">05</div>
+                <div class="co--date-picker-calender__hour">06</div>
+                <div class="co--date-picker-calender__hour">07</div>
+                <div class="co--date-picker-calender__hour">08</div>
+                <div class="co--date-picker-calender__hour">09</div>
+                <div class="co--date-picker-calender__hour">10</div>
+                <div class="co--date-picker-calender__hour">11</div>
+                <div class="co--date-picker-calender__hour">12</div>
+                <div class="co--date-picker-calender__hour">13</div>
+                <div class="co--date-picker-calender__hour">14</div>
+                <div class="co--date-picker-calender__hour">15</div>
+                <div class="co--date-picker-calender__hour">16</div>
+                <div class="co--date-picker-calender__hour">17</div>
+                <div class="co--date-picker-calender__hour">18</div>
+                <div class="co--date-picker-calender__hour">19</div>
+                <div class="co--date-picker-calender__hour">20</div>
+                <div class="co--date-picker-calender__hour">21</div>
+                <div class="co--date-picker-calender__hour">22</div>
+                <div class="co--date-picker-calender__hour">23</div>
+              </div>
+              <div class="co--date-picker-calender__next-hour">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="co--date-picker-calender__time">
+              <div class="co--date-picker-calender__prev-minute">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__minutes">
+                <div class="co--date-picker-calender__minute">00</div>
+                <div class="co--date-picker-calender__minute">15</div>
+                <div class="co--date-picker-calender__minute selected">30</div>
+                <div class="co--date-picker-calender__minute">45</div>
+                <div class="co--date-picker-calender__minute">60</div>
+              </div>
+              <div class="co--date-picker-calender__next-minute">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="co--date-picker-calender__body">
+            <div class="co--date-picker-calender__navigation">
+              <div class="co--date-picker-calender__prev-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__inputs">
+                <select name="month" class="co--date-picker-calender__month">
+                  <option value="1" selected>Ocak</option>
+                  <option value="2">Şubat</option>
+                  <option value="3">Mart</option>
+                </select>
+
+                <input
+                  type="number"
+                  name="year"
+                  class="co--date-picker-calender__year"
+                  value="2020"
+                />
+              </div>
+
+              <div class="co--date-picker-calender__next-month">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="co--date-picker-calender__content">
+              <div class="co--date-picker-calender__weekdays">
+                <span class="co--date-picker-calender__weekday">Pts</span>
+                <span class="co--date-picker-calender__weekday">Sal</span>
+                <span class="co--date-picker-calender__weekday">Çar</span>
+                <span class="co--date-picker-calender__weekday">Per</span>
+                <span class="co--date-picker-calender__weekday">Cum</span>
+                <span class="co--date-picker-calender__weekday">Cts</span>
+                <span class="co--date-picker-calender__weekday">Paz</span>
+              </div>
+              <div class="co--date-picker-calender__days">
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >27</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >28</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >29</span
+                >
+                <span
+                  class="co--date-picker-calender__day in-range prev-month-day"
+                  >30</span
+                >
+                <span class="co--date-picker-calender__day in-range">1</span>
+                <span class="co--date-picker-calender__day in-range">2</span>
+                <span class="co--date-picker-calender__day in-range">3</span>
+                <span class="co--date-picker-calender__day in-range">4</span>
+                <span class="co--date-picker-calender__day in-range">5</span>
+                <span class="co--date-picker-calender__day in-range">6</span>
+                <span class="co--date-picker-calender__day selected">7</span>
+                <span class="co--date-picker-calender__day">8</span>
+                <span class="co--date-picker-calender__day">9</span>
+                <span class="co--date-picker-calender__day">10</span>
+                <span class="co--date-picker-calender__day">11</span>
+                <span class="co--date-picker-calender__day">12</span>
+                <span class="co--date-picker-calender__day">13</span>
+                <span class="co--date-picker-calender__day">14</span>
+                <span class="co--date-picker-calender__day">15</span>
+                <span class="co--date-picker-calender__day">16</span>
+                <span class="co--date-picker-calender__day">17</span>
+                <span class="co--date-picker-calender__day">18</span>
+                <span class="co--date-picker-calender__day">19</span>
+                <span class="co--date-picker-calender__day">20</span>
+                <span class="co--date-picker-calender__day">21</span>
+                <span class="co--date-picker-calender__day">22</span>
+                <span class="co--date-picker-calender__day">23</span>
+                <span class="co--date-picker-calender__day">24</span>
+                <span class="co--date-picker-calender__day">25</span>
+                <span class="co--date-picker-calender__day">26</span>
+                <span class="co--date-picker-calender__day">27</span>
+                <span class="co--date-picker-calender__day">28</span>
+                <span class="co--date-picker-calender__day">29</span>
+                <span class="co--date-picker-calender__day">30</span>
+                <span class="co--date-picker-calender__day">31</span>
+                <span class="co--date-picker-calender__day next-month-day"
+                  >1</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >2</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >3</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >4</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >5</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >6</span
+                >
+                <span class="co--date-picker-calender__day next-month-day"
+                  >7</span
+                >
+              </div>
+            </div>
+            <div class="co--date-picker-calender__time">
+              <div class="co--date-picker-calender__prev-hour">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__hours">
+                <div class="co--date-picker-calender__hour">00</div>
+                <div class="co--date-picker-calender__hour">01</div>
+                <div class="co--date-picker-calender__hour selected">02</div>
+                <div class="co--date-picker-calender__hour">03</div>
+                <div class="co--date-picker-calender__hour">04</div>
+                <div class="co--date-picker-calender__hour">05</div>
+                <div class="co--date-picker-calender__hour">06</div>
+                <div class="co--date-picker-calender__hour">07</div>
+                <div class="co--date-picker-calender__hour">08</div>
+                <div class="co--date-picker-calender__hour">09</div>
+                <div class="co--date-picker-calender__hour">10</div>
+                <div class="co--date-picker-calender__hour">11</div>
+                <div class="co--date-picker-calender__hour">12</div>
+                <div class="co--date-picker-calender__hour">13</div>
+                <div class="co--date-picker-calender__hour">14</div>
+                <div class="co--date-picker-calender__hour">15</div>
+                <div class="co--date-picker-calender__hour">16</div>
+                <div class="co--date-picker-calender__hour">17</div>
+                <div class="co--date-picker-calender__hour">18</div>
+                <div class="co--date-picker-calender__hour">19</div>
+                <div class="co--date-picker-calender__hour">20</div>
+                <div class="co--date-picker-calender__hour">21</div>
+                <div class="co--date-picker-calender__hour">22</div>
+                <div class="co--date-picker-calender__hour">23</div>
+              </div>
+              <div class="co--date-picker-calender__next-hour">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="co--date-picker-calender__time">
+              <div class="co--date-picker-calender__prev-minute">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                </svg>
+              </div>
+              <div class="co--date-picker-calender__minutes">
+                <div class="co--date-picker-calender__minute">00</div>
+                <div class="co--date-picker-calender__minute">15</div>
+                <div class="co--date-picker-calender__minute selected">30</div>
+                <div class="co--date-picker-calender__minute">45</div>
+                <div class="co--date-picker-calender__minute">60</div>
+              </div>
+              <div class="co--date-picker-calender__next-minute">
+                <svg
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="co--date-picker-calender__footer">
+          <button
+            class="co--btn co--btn--ghost co--btn--sm co--btn--icon-only"
+            type="button"
+          >
+            <svg
+              focusable="false"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+              ></path>
+              <title>Close</title>
+            </svg>
+          </button>
+
+          <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+            Şimdi
+          </button>
+
+          <button
+            class="co--btn co--btn--ghost co--btn--sm co--btn--icon-only"
+            type="button"
+          >
+            <svg
+              focusable="false"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M13 24L4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24z"
+              ></path>
+              <title>Checkmark</title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

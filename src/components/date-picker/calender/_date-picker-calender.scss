@@ -1,12 +1,14 @@
 $unitSize: 2.5rem;
 
-@mixin calendar-unit {
+@mixin calendar-unit() {
   width: $unitSize;
   height: $unitSize;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   cursor: pointer;
+  flex-shrink: 0;
   &:hover {
     background-color: $hover-ui;
   }
@@ -18,36 +20,167 @@ $unitSize: 2.5rem;
   flex-direction: column;
 }
 
-.#{$prefix}--date-picker-calender__body {
-  padding: $spacing-04;
+.#{$prefix}--date-picker-calender__header {
+  padding: $spacing-03 $spacing-05;
+  background-color: $inverse-02;
+  color: $text-03;
+  display: flex;
 }
 
-.#{$prefix}--date-picker-calender__days {
+.#{$prefix}--date-picker-calender__body {
+  padding: $spacing-03;
+}
+
+.#{$prefix}--date-picker-calender__days,
+.#{$prefix}--date-picker-calender__weekdays {
   display: flex;
   flex-wrap: wrap;
   max-width: 7 * $unitSize;
-  .#{$prefix}--date-picker-calender__day {
-    @include calendar-unit();
-    @include type-style("body-short-01");
+  width: 7 * $unitSize;
+}
+
+.#{$prefix}--date-picker-calender__day {
+  @include calendar-unit();
+  @include type-style("body-short-01");
+  &.prev-month-day,
+  &.next-month-day {
+    color: $text-05;
   }
+
+  &.selected {
+    color: $text-04;
+    background-color: $interactive-01;
+
+    &:focus {
+      outline: rem(1px) solid $ui-02;
+      outline-offset: rem(-3px);
+    }
+  }
+
+  &.today {
+    position: relative;
+    color: $link-01;
+    font-weight: 600;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: rem(7px);
+      left: 50%;
+      transform: translateX(-50%);
+      height: rem(4px);
+      width: rem(4px);
+      background-color: $link-01;
+    }
+
+    &.selected {
+      @include focus-outline("outline");
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &.in-range {
+    background-color: $highlight;
+    color: $text-01;
+  }
+}
+
+.#{$prefix}--date-picker-calender__weekday {
+  @include calendar-unit();
+  @include type-style("caption-01");
+  color: $text-05;
 }
 
 .#{$prefix}--date-picker-calender__navigation {
   display: flex;
-  .#{$prefix}--date-picker-calender__prev-month,
-  .#{$prefix}--date-picker-calender__next-month {
-    @include calendar-unit();
-  }
+}
+
+.#{$prefix}--date-picker-calender__inputs {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .#{$prefix}--date-picker-calender__month,
 .#{$prefix}--date-picker-calender__year {
-  @include reset;
   background-color: transparent;
-  height: $unitSize;
+  height: 2rem;
+  margin: 0;
+  border: none;
+  padding: $spacing-02;
+  color: $text-01;
+  font-size: inherit;
+  font-family: inherit !important;
+  font-weight: 600;
+  line-height: inherit;
+  vertical-align: baseline;
+
+  &:focus {
+    @include focus-outline("border");
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    color: $disabled-02;
+    background-color: $ui-01;
+    pointer-events: none;
+  }
+}
+
+.#{$prefix}--date-picker-calender__prev-month,
+.#{$prefix}--date-picker-calender__next-month,
+.#{$prefix}--date-picker-calender__prev-hour,
+.#{$prefix}--date-picker-calender__next-hour,
+.#{$prefix}--date-picker-calender__prev-minute,
+.#{$prefix}--date-picker-calender__next-minute {
+  @include calendar-unit();
+  fill: $text-01;
 }
 
 .#{$prefix}--date-picker-calender__year {
   width: 7ch;
   margin-left: $spacing-05;
+}
+
+.#{$prefix}--date-picker-calender__time {
+  display: flex;
+  align-items: center;
+  background-color: $ui-03;
+  padding: $spacing-02 0;
+
+  .#{$prefix}--date-picker-calender__hours,
+  .#{$prefix}--date-picker-calender__minutes {
+    display: flex;
+    max-width: 5 * $unitSize;
+    width: 5 * $unitSize;
+    overflow: hidden;
+  }
+
+  .#{$prefix}--date-picker-calender__hour,
+  .#{$prefix}--date-picker-calender__minute {
+    @include calendar-unit();
+    &.selected {
+      color: $text-04;
+      background-color: $interactive-04;
+    }
+  }
+}
+
+.#{$prefix}--date-picker-calender__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-02 $spacing-03;
+  background-color: $ui-03;
+
+  .#{$prefix}--btn.#{$prefix}--btn--ghost {
+    color: $text-01;
+  }
+}
+
+.#{$prefix}--date-range-picker-calender__body {
+  display: flex;
 }
