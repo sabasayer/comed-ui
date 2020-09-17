@@ -13,6 +13,8 @@ import { initiateDataTables } from "./components/data-table/data-table";
 import { initiatePaginations } from "./components/pagination/pagination";
 import { initiateAccordions } from "./components/accordion/accordion";
 
+import { initiateCalenders } from "./components/date-picker/calender/date-picker-calender";
+
 const container = document.getElementById("dynamic-content-container");
 
 const createLink = (name, link) => {
@@ -75,6 +77,8 @@ const handleClick = (items, link) => {
       initiateToggleButtons();
       initiatePaginations();
       initiateDataTables();
+
+      initiateCalenders();
     });
 };
 

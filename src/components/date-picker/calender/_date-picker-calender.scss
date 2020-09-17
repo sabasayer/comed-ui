@@ -1,8 +1,8 @@
-$unitSize: 2.5rem;
+$datePickerCalenderUnitSize: 2.5rem;
 
 @mixin calendar-unit() {
-  width: $unitSize;
-  height: $unitSize;
+  width: $datePickerCalenderUnitSize;
+  height: $datePickerCalenderUnitSize;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -18,6 +18,7 @@ $unitSize: 2.5rem;
   background-color: $ui-01;
   display: inline-flex;
   flex-direction: column;
+  user-select: none;
 }
 
 .#{$prefix}--date-picker-calender__header {
@@ -25,6 +26,19 @@ $unitSize: 2.5rem;
   background-color: $inverse-02;
   color: $text-03;
   display: flex;
+  overflow: hidden;
+  max-width: calc(2 * #{$spacing-03} + #{7 * $datePickerCalenderUnitSize});
+  h5 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.#{$prefix}--date-range-picker-calender {
+  .#{$prefix}--date-picker-calender__header {
+    max-width: calc(4 * #{$spacing-03} + #{14 * $datePickerCalenderUnitSize});
+  }
 }
 
 .#{$prefix}--date-picker-calender__body {
@@ -35,8 +49,8 @@ $unitSize: 2.5rem;
 .#{$prefix}--date-picker-calender__weekdays {
   display: flex;
   flex-wrap: wrap;
-  max-width: 7 * $unitSize;
-  width: 7 * $unitSize;
+  max-width: 7 * $datePickerCalenderUnitSize;
+  width: 7 * $datePickerCalenderUnitSize;
 }
 
 .#{$prefix}--date-picker-calender__day {
@@ -76,6 +90,8 @@ $unitSize: 2.5rem;
 
     &.selected {
       @include focus-outline("outline");
+      color: $text-04;
+
       &::after {
         display: none;
       }
@@ -118,7 +134,7 @@ $unitSize: 2.5rem;
   font-weight: 600;
   line-height: inherit;
   vertical-align: baseline;
-
+  width: auto;
   &:focus {
     @include focus-outline("border");
   }
@@ -143,7 +159,7 @@ $unitSize: 2.5rem;
 
 .#{$prefix}--date-picker-calender__year {
   width: 7ch;
-  margin-left: $spacing-05;
+  margin-left: $spacing-04;
 }
 
 .#{$prefix}--date-picker-calender__time {
@@ -155,8 +171,8 @@ $unitSize: 2.5rem;
   .#{$prefix}--date-picker-calender__hours,
   .#{$prefix}--date-picker-calender__minutes {
     display: flex;
-    max-width: 5 * $unitSize;
-    width: 5 * $unitSize;
+    max-width: 5 * $datePickerCalenderUnitSize;
+    width: 5 * $datePickerCalenderUnitSize;
     overflow: hidden;
   }
 

@@ -1,0 +1,90 @@
+$min-calender-cell-width: 5rem;
+$calender-border-color: $ui-03;
+
+.#{$prefix}--calender {
+  background-color: $ui-01;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.#{$prefix}--calender-header {
+  display: flex;
+  border-bottom: 1px solid $calender-border-color;
+  position: sticky;
+  top: 0;
+  background-color: $ui-01;
+  .#{$prefix}--calender-cell {
+    padding: $spacing-04;
+    text-align: center;
+    @include type-style("heading-01");
+  }
+
+  .#{$prefix}--calender-minute {
+    border-top: 0;
+  }
+}
+
+.#{$prefix}--calender-body {
+  display: flex;
+  flex: 1;
+
+  .#{$prefix}--calender-cell,
+  .#{$prefix}--calender-hour {
+    height: 5rem;
+    padding: $spacing-04;
+  }
+
+  .#{$prefix}--calender-minute {
+    height: 5rem;
+  }
+
+  .#{$prefix}--calender-cell {
+    border-left: 1px solid $calender-border-color;
+    border-top: 1px solid $calender-border-color;
+  }
+}
+
+.#{$prefix}--calender-rows {
+  flex: 1 1 auto;
+}
+
+.#{$prefix}--calender-row {
+  display: flex;
+  flex: 1 1 auto;
+  .#{$prefix}--calender-cell {
+    flex: 1 1 $min-calender-cell-width;
+  }
+  &:first-child {
+    .#{$prefix}--calender-cell {
+      border-top: 0;
+    }
+  }
+}
+
+.#{$prefix}--calender-hour {
+  width: 4rem;
+  border-top: 1px solid $calender-border-color;
+  @include type-style("body-long-01");
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.#{$prefix}--calender-minute {
+  width: 1.5rem;
+  border-top: 1px solid $calender-border-color;
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  .#{$prefix}--calender-minute-item {
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+    @include type-style("helper-text-01");
+  }
+}

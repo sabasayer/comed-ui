@@ -34,5 +34,6 @@ export const siteMap = {
   "Date Picker": "components/date-picker/date-picker.html",
   "Date Picker Calender":
     "components/date-picker/calender/date-picker-calender.html",
+  Calender: "components/calender/calender.html",
   Loading: "components/loading/loading.html",
 };
