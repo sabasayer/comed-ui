@@ -10,6 +10,12 @@ export const initiateDropdowns = () => {
       shownClassName: "co--dropdown-list--shown",
       showEvent: "click",
       isSameWidth: true,
+      onOpen:(trigger,popover)=>{
+        const firstFocusableElement = popover.querySelector('[tabindex]');
+        if(!firstFocusableElement) return;
+
+        firstFocusableElement.focus();
+      }
     });
   });
 };

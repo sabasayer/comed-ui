@@ -1,4 +1,5 @@
 $datePickerCalenderUnitSize: 2.5rem;
+$datePickerSuggestionSize: 3 * $datePickerCalenderUnitSize;
 
 @mixin calendar-unit() {
   width: $datePickerCalenderUnitSize;
@@ -19,6 +20,33 @@ $datePickerCalenderUnitSize: 2.5rem;
   display: inline-flex;
   flex-direction: column;
   user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  animation: none;
+  position: absolute;
+  &.elevated {
+    box-shadow: 1px 0 0 #e6e6e6, -1px 0 0 #e6e6e6, 0 1px 0 #e6e6e6,
+      0 -1px 0 #e6e6e6, 0 3px 13px rgba(0, 0, 0, 0.08);
+  }
+  &.open,
+  &.inline {
+    opacity: 1;
+    visibility: inherit;
+    overflow: visible;
+    max-height: 640px;
+  }
+  &.inline {
+    position: relative;
+  }
+  &.animate.open {
+    animation: fpFadeInDown $duration--fast-02 motion(entrance, productive);
+  }
+  &:focus {
+    @include focus-outline("border");
+  }
 }
 
 .#{$prefix}--date-picker-calender__header {
@@ -38,6 +66,14 @@ $datePickerCalenderUnitSize: 2.5rem;
 .#{$prefix}--date-range-picker-calender {
   .#{$prefix}--date-picker-calender__header {
     max-width: calc(4 * #{$spacing-03} + #{14 * $datePickerCalenderUnitSize});
+  }
+  &.has-suggestions {
+    .#{$prefix}--date-picker-calender__header {
+      max-width: calc(
+        4 * #{$spacing-03} + #{14 * $datePickerCalenderUnitSize} + #{$datePickerSuggestionSize}
+      );
+      padding-left: $datePickerSuggestionSize;
+    }
   }
 }
 
@@ -197,6 +233,30 @@ $datePickerCalenderUnitSize: 2.5rem;
   }
 }
 
+.#{$prefix}--date-range-picker-calender__suggestions {
+  padding: $spacing-04;
+  width: $datePickerSuggestionSize;
+  border-right: 1px solid $ui-03;
+
+  .#{$prefix}--btn {
+    margin-bottom: $spacing-02;
+    width: 100%;
+  }
+}
+
 .#{$prefix}--date-range-picker-calender__body {
   display: flex;
+}
+
+@keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0);
+  }
 }

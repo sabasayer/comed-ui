@@ -13,7 +13,7 @@
     <div class="co--col-lg">
       <h6>Date Time</h6>
 
-      <div class="co--date-picker-calender">
+      <div class="co--date-picker-calender inline">
         <div class="co--date-picker-calender__header">
           <h5>25 Eyl 2020 - 02:00</h5>
         </div>
@@ -292,7 +292,7 @@
     <div class="col-lg">
       <h6>Time</h6>
 
-      <div class="co--date-picker-calender">
+      <div class="co--date-picker-calender inline">
         <div class="co--date-picker-calender__header">
           <h5>02:00</h5>
         </div>
@@ -399,7 +399,7 @@
     <div class="co--col-lg">
       <h6>With Action Bar</h6>
 
-      <div class="co--date-picker-calender">
+      <div class="co--date-picker-calender inline">
         <div class="co--date-picker-calender__header">
           <h5>12 Eyl 2020</h5>
         </div>
@@ -628,14 +628,30 @@
     </div>
 
     <div class="co--col-lg">
-      <h6>Date Range</h6>
+      <h6>Date Range with suggestions</h6>
 
-      <div class="co--date-picker-calender co--date-range-picker-calender">
+      <div
+        class="co--date-picker-calender co--date-range-picker-calender has-suggestions inline"
+      >
         <div class="co--date-picker-calender__header">
           <h5 class="flex-grow">25 Eyl 2020</h5>
           <h5 class="flex-grow">07 Ek 2020</h5>
         </div>
         <div class="co--date-range-picker-calender__body">
+          <div class="co--date-range-picker-calender__suggestions">
+            <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+              1 Hafta
+            </button>
+            <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+              1 Ay
+            </button>
+            <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+              3 Ay
+            </button>
+            <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+              1 Yıl
+            </button>
+          </div>
           <div class="co--date-picker-calender__body">
             <div class="co--date-picker-calender__navigation">
               <div class="co--date-picker-calender__prev-month">
@@ -1004,7 +1020,7 @@
     <div class="co--col-lg">
       <h6>Date Time Range</h6>
 
-      <div class="co--date-picker-calender  co--date-range-picker-calender">
+      <div class="co--date-picker-calender co--date-range-picker-calender inline">
         <div class="co--date-picker-calender__header">
           <h5 class="flex-grow">25 Eyl 2020 - 02:00</h5>
           <h5 class="flex-grow">07 Ek 2020 - 14:00</h5>

@@ -39,6 +39,14 @@ class Calender extends Renderer {
     return this.data.date.getDate();
   }
 
+  get currentHour() {
+    return this.data.date.getHours();
+  }
+
+  get currentMinute() {
+    return this.data.date.getMinutes();
+  }
+
   beforeRender() {
     this.months = [
       "Ocak",
@@ -177,12 +185,24 @@ class Calender extends Renderer {
   }
 
   createDay({ dayNumber, isPrev, isNext, isToday, isSelected }) {
+    const value = new Date(
+      this.currentYear,
+      this.currentMonth + (isNext ? 1 : isPrev ? -1 : 0),
+      dayNumber
+    );
+
+    const ariaCurrent = isToday ? 'aria-current="date"' : "";
+
     return ` <span class="co--date-picker-calender__day 
     ${isPrev ? "prev-month-day" : ""}  
     ${isNext ? "next-month-day" : ""}  
     ${isToday ? "today" : ""}
     ${isSelected ? "selected" : ""}
-    ">
+    "
+    aria-label="${value.toDateString()}"
+    tab-index="-1"
+    ${ariaCurrent}
+    >
         ${dayNumber}
     </span>`.trim();
   }
@@ -234,7 +254,10 @@ class Calender extends Renderer {
       })}`;
     }
 
-    const addedDays = lastDay + dayOfWeek - 1;
+    const addedPrevMonthDays = dayOfWeek - 1 > 0 ? dayOfWeek - 1 : 0;
+
+    const addedDays = lastDay + addedPrevMonthDays;
+    console.log({ addedDays, lastDay, dayOfWeek });
     const remainingDays = this.totalDayCountToShow - addedDays;
 
     for (let i = 0; i < remainingDays; i++) {
@@ -274,6 +297,7 @@ class Calender extends Renderer {
         class="co--date-picker-calender__month"
         aria-controls="${id}"
         data-dropdown-target="#${id}"
+        tabindex="-1"
       >
         ${monthName}
       </button>
@@ -286,6 +310,7 @@ class Calender extends Renderer {
         aria-hidden="true"
         wh-menu-anchor="left"
         aria-labelledby="${id}-label"
+        aria-label="month"
         data-floating-menu-direction="bottom"
       >
         ${this.createMonths()}
@@ -296,6 +321,8 @@ class Calender extends Renderer {
         name="year"
         class="co--date-picker-calender__year"
         value="${currentYear}"
+        tabindex="-1"
+        aria-label="year"
       />
     </div>
 
@@ -316,10 +343,162 @@ class Calender extends Renderer {
   </div>`;
   }
 
+  createHour(hour, isSelected) {
+    const hourString = hour <= 9 ? `0${hour}` : hour;
+    return `<div class="co--date-picker-calender__hour ${
+      isSelected ? "selected" : ""
+    }" aria-label="${hour}">${hourString}</div>`;
+  }
+
+  createMinute(minute, isSelected) {
+    const minuteString = minute <= 9 ? `0${minute}` : minute;
+    return `<div class="co--date-picker-calender__minute ${
+      isSelected ? "selected" : ""
+    }" aria-label="${minute}">${minuteString}</div>`;
+  }
+
+  createHours() {
+    let hours = "";
+
+    for (let i = 0; i < 24; i++) {
+      hours += this.createHour(i, i == this.currentHour);
+    }
+
+    return `<div class="co--date-picker-calender__time" aria-label="hours">
+                <div class="co--date-picker-calender__prev-hour">
+                  <svg
+                    focusable="false"
+                    preserveAspectRatio="xMidYMid meet"
+                    style="will-change: transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                  </svg>
+                </div>
+                <div class="co--date-picker-calender__hours">
+                 ${hours}
+                </div>
+                <div class="co--date-picker-calender__next-hour">
+                  <svg
+                    focusable="false"
+                    preserveAspectRatio="xMidYMid meet"
+                    style="will-change: transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                  </svg>
+                </div>
+              </div>`;
+  }
+
+  createMinutes() {
+    let minutes = "";
+
+    for (let i = 0; i <= 60; i += 15) {
+      minutes += this.createMinute(i, i == this.currentMinute);
+    }
+
+    return `<div class="co--date-picker-calender__time" aria-label="minutes">
+                <div class="co--date-picker-calender__prev-minute">
+                  <svg
+                    focusable="false"
+                    preserveAspectRatio="xMidYMid meet"
+                    style="will-change: transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                  </svg>
+                </div>
+                <div class="co--date-picker-calender__minutes">
+                 ${minutes}
+                </div>
+                <div class="co--date-picker-calender__next-minute">
+                  <svg
+                    focusable="false"
+                    preserveAspectRatio="xMidYMid meet"
+                    style="will-change: transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path d="M11 8l-5 5-.7-.7L9.6 8 5.3 3.7 6 3z"></path>
+                  </svg>
+                </div>
+              </div>`;
+  }
+
+  createTime() {
+    return `${this.createHours()} ${this.createMinutes()}`;
+  }
+
+  createFooter() {
+    return `<div class="co--date-picker-calender__footer">
+    <button
+      class="co--btn co--btn--ghost co--btn--sm co--btn--icon-only"
+      type="button"
+    >
+      <svg
+        focusable="false"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        width="24"
+        height="24"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        ></path>
+        <title>Close</title>
+      </svg>
+    </button>
+
+    <button class="co--btn co--btn--ghost co--btn--sm" type="button">
+      Şimdi
+    </button>
+
+    <button
+      class="co--btn co--btn--ghost co--btn--sm co--btn--icon-only"
+      type="button"
+    >
+      <svg
+        focusable="false"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        width="24"
+        height="24"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+      >
+        <path
+          d="M13 24L4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24z"
+        ></path>
+        <title>Checkmark</title>
+      </svg>
+    </button>
+  </div>`;
+  }
+
   createTemplate(data) {
     const isoValue = this.data.date ? this.data.date.toISOString() : "";
 
-    return `<div class="co--date-picker-calender" data-value="${isoValue}">
+    return `<div class="co--date-picker-calender inline" tabindex="-1" data-value="${isoValue}">
     <div class="co--date-picker-calender__header">
       <h5>${this.createDateString()}</h5>
     </div>
@@ -334,7 +513,9 @@ class Calender extends Renderer {
           ${this.createDays()}
         </div>
       </div>
+      ${this.createTime()}
     </div>
+    ${this.createFooter()}
   </div>`;
   }
 }

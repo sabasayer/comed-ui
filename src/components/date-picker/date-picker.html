@@ -44,6 +44,7 @@
   </div>
 </div>
 
+
 <!-- Basic with calendar -->
 <div class="co--form-item">
   <div
@@ -85,3 +86,24 @@
   </div>
 </div>
 
+<div class="co--form-item">
+  <div data-date-picker data-date-picker-type="range"
+    class="co--date-picker co--date-picker--range">
+    <div class="co--date-picker-container">
+      <label for="date-picker-1" class="co--label">Start date label</label>
+      <div class="co--date-picker-input__wrapper">
+        <input type="text" id="date-picker-1" class="co--date-picker__input"
+          pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy" data-date-picker-input-from />
+        <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" data-date-picker-icon="true" class="co--date-picker__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13,2h-2V1h-1v1H6V1H5v1H3C2.4,2,2,2.4,2,3v10c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V3C14,2.4,13.6,2,13,2z M13,13H3V6h10V13z M13,5H3V3h2v1h1V3h4v1h1V3h2V5z"></path></svg>
+      </div>
+    </div>
+    <div class="co--date-picker-container">
+      <label for="date-picker-2" class="co--label">End date label</label>
+      <div class="co--date-picker-input__wrapper">
+        <input type="text" id="date-picker-2" class="co--date-picker__input"
+          pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy" data-date-picker-input-to />
+        <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" data-date-picker-icon="true" class="co--date-picker__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13,2h-2V1h-1v1H6V1H5v1H3C2.4,2,2,2.4,2,3v10c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V3C14,2.4,13.6,2,13,2z M13,13H3V6h10V13z M13,5H3V3h2v1h1V3h4v1h1V3h2V5z"></path></svg>
+      </div>
+    </div>
+  </div>
+</div>

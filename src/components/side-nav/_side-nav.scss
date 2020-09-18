@@ -50,6 +50,8 @@ $unit: 0.5rem;
     will-change: width;
     overflow: hidden;
 
+    @include focus-outline("reset");
+
     &--expanded,
     &:focus-within {
       width: mini-units(32);
