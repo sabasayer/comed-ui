@@ -17,7 +17,7 @@ export const siteMap = {
   Slider: "components/slider/slider.html",
   "Page Drawer": "components/page-drawer/page-drawer.html",
   Tabs: "components/tabs/tabs.html",
-  Tag: "components/tag/tag.html",
+  "Tag / Badge": "components/tag/tag.html",
   "Inline Notification": "components/notification/inline-notification.html",
   "Toast Notification": "components/notification/toast-notification.html",
   Tooltip: "components/tooltip/tooltip.html",

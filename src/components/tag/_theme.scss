@@ -1,0 +1,31 @@
+@mixin tag-custom-properties($current-theme) {
+  @each $name, $map in $tag-colors {
+    $options: map-get($map, "values");
+
+    @each $option in $options {
+      $theme: map-get($option, "theme");
+
+      $value: map-get($option, "value");
+
+      @if is-subset-of-theme($current-theme, $theme) == true {
+        --#{$custom-property-prefix}-#{$name}: #{$value};
+      }
+    }
+  }
+}
+
+.theme-white {
+  @include tag-custom-properties($carbon--theme--white);
+}
+
+.theme-g10 {
+  @include tag-custom-properties($carbon--theme--g10);
+}
+
+.theme-g90 {
+  @include tag-custom-properties($carbon--theme--g90);
+}
+
+.theme-g100 {
+  @include tag-custom-properties($carbon--theme--g100);
+}

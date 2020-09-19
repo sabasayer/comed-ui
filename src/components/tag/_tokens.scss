@@ -1,0 +1,255 @@
+$tag-colors: map-merge(
+  $tag-colors,
+  (
+    "tag-border-red": (
+      fallback: $carbon__red-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__red-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__red-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__red-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__red-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__red-40,
+        ),
+      ),
+    ),
+    "tag-border-magenta": (
+      fallback: $carbon__magenta-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__magenta-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__magenta-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__magenta-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__magenta-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__magenta-40,
+        ),
+      ),
+    ),
+    "tag-border-purple": (
+      fallback: $carbon__purple-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__purple-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__purple-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__purple-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__purple-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__purple-40,
+        ),
+      ),
+    ),
+    "tag-border-blue": (
+      fallback: $carbon__magenta-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__blue-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__blue-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__blue-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__blue-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__blue-40,
+        ),
+      ),
+    ),
+    "tag-border-cyan": (
+      fallback: $carbon__cyan-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__cyan-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__cyan-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__cyan-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__cyan-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__cyan-40,
+        ),
+      ),
+    ),
+    "tag-border-teal": (
+      fallback: $carbon__teal-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__teal-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__teal-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__teal-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__teal-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__teal-40,
+        ),
+      ),
+    ),
+    "tag-border-green": (
+      fallback: $carbon__green-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__green-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__green-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__green-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__green-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__green-40,
+        ),
+      ),
+    ),
+    "tag-border-gray": (
+      fallback: $carbon__gray-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__gray-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__gray-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__gray-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__gray-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__gray-40,
+        ),
+      ),
+    ),
+    "tag-border-cool-gray": (
+      fallback: $carbon__cool-gray-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__cool-gray-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__cool-gray-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__cool-gray-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__cool-gray-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__cool-gray-40,
+        ),
+      ),
+    ),
+    "tag-border-warm-gray": (
+      fallback: $carbon__warm-gray-40,
+      values: (
+        (
+          theme: $carbon--theme--white,
+          value: $carbon__warm-gray-40,
+        ),
+        (
+          theme: $carbon--theme--g10,
+          value: $carbon__warm-gray-40,
+        ),
+        (
+          theme: $carbon--theme--g90,
+          value: $carbon__warm-gray-90,
+        ),
+        (
+          theme: $carbon--theme--g100,
+          value: $carbon__warm-gray-90,
+        ),
+        (
+          theme: $carbon--theme--v9,
+          value: $carbon__warm-gray-40,
+        ),
+      ),
+    ),
+  )
+);

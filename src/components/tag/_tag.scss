@@ -1,1 +1,58 @@
 @import "carbon-components/scss/components/tag/tag";
+@import "./tokens";
+@import "./theme";
+
+.#{$prefix}--tag--flat {
+  border-radius: 0;
+  border-left: 2px solid get-token-value($tag-colors, "tag-border-gray");
+
+  &.#{$prefix}--tag--red {
+    border-color: get-token-value($tag-colors, "tag-border-red");
+  }
+
+  &.#{$prefix}--tag--magenta {
+    border-color: get-token-value($tag-colors, "tag-border-magenta");
+  }
+
+  &.#{$prefix}--tag--purple {
+    border-color: get-token-value($tag-colors, "tag-border-purple");
+  }
+
+  &.#{$prefix}--tag--blue {
+    border-color: get-token-value($tag-colors, "tag-border-blue");
+  }
+
+  &.#{$prefix}--tag--cyan {
+    border-color: get-token-value($tag-colors, "tag-border-cyan");
+  }
+
+  &.#{$prefix}--tag--teal {
+    border-color: get-token-value($tag-colors, "tag-border-teal");
+  }
+
+  &.#{$prefix}--tag--green {
+    border-color: get-token-value($tag-colors, "tag-border-green");
+  }
+
+  &.#{$prefix}--tag--gray {
+    border-color: get-token-value($tag-colors, "tag-border-gray");
+  }
+
+  &.#{$prefix}--tag--cool-gray {
+    border-color: get-token-value($tag-colors, "tag-border-cool-gray");
+  }
+
+  &.#{$prefix}--tag--warm-gray {
+    border-color: get-token-value($tag-colors, "tag-border-warm-gray");
+  }
+}
+
+
+
+.#{$prefix}--tag--circle {
+  border-radius: 100%;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  overflow: hidden;
+}
