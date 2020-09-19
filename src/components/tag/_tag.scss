@@ -47,7 +47,97 @@
   }
 }
 
+.#{$prefix}--tag--inverse {
+  @include tag-theme(
+    get-token-value($tag-colors, "tag-color-gray"),
+    $inverse-01,
+    get-token-value($tag-colors, "tag-hover-gray")
+  );
 
+  .#{$prefix}--tag__close-icon {
+    fill: $inverse-01;
+  }
+
+  &.#{$prefix}--tag--red {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-red"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-red")
+    );
+  }
+
+  &.#{$prefix}--tag--magenta {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-magenta"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-magenta")
+    );
+  }
+
+  &.#{$prefix}--tag--purple {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-purple"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-purple")
+    );
+  }
+
+  &.#{$prefix}--tag--blue {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-blue"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-blue")
+    );
+  }
+
+  &.#{$prefix}--tag--cyan {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-cyan"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-cyan")
+    );
+  }
+
+  &.#{$prefix}--tag--teal {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-teal"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-teal")
+    );
+  }
+
+  &.#{$prefix}--tag--green {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-green"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-green")
+    );
+  }
+
+  &.#{$prefix}--tag--gray {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-gray"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-gray")
+    );
+  }
+
+  &.#{$prefix}--tag--cool-gray {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-cool-gray"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-cool-gray")
+    );
+  }
+
+  &.#{$prefix}--tag--warm-gray {
+    @include tag-theme(
+      get-token-value($tag-colors, "tag-color-warm-gray"),
+      $inverse-01,
+      get-token-value($tag-colors, "tag-hover-warm-gray")
+    );
+  }
+}
 
 .#{$prefix}--tag--circle {
   border-radius: 100%;
