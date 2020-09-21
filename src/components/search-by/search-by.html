@@ -1,0 +1,100 @@
+<div class="co--search-by">
+  <div data-search role="search" class="co--search co--search--xl">
+    <label id="search-input-label-1" class="co--label" for="search__input-1"
+      >Search</label
+    >
+    <input
+      class="co--search-input"
+      type="text"
+      id="search__input-1"
+      placeholder="Search"
+    />
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      class="co--search-magnifier"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <path
+        d="M15,14.3L10.7,10c1.9-2.3,1.6-5.8-0.7-7.7S4.2,0.7,2.3,3S0.7,8.8,3,10.7c2,1.7,5,1.7,7,0l4.3,4.3L15,14.3z M2,6.5	C2,4,4,2,6.5,2S11,4,11,6.5S9,11,6.5,11S2,9,2,6.5z"
+      ></path>
+    </svg>
+    <button
+      class="co--search-close co--search-close--hidden"
+      title="Clear search
+              input"
+      aria-label="Clear search input"
+    >
+      <svg
+        focusable="false"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+        class="co--search-clear"
+        width="20"
+        height="20"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        ></path>
+      </svg>
+    </button>
+  </div>
+  <button
+    class="co--btn co--btn--icon-only"
+    data-search-by-menu-target="#search-by-menu-1"
+    type="button"
+  >
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      class="co--dropdown__arrow co--btn__icon"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <path d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"></path>
+    </svg>
+  </button>
+</div>
+
+<div
+  class="co--overflow-menu-options"
+  tabindex="-1"
+  role="menu"
+  id="search-by-menu-1"
+  data-floating-menu-direction="bottom-end"
+>
+  <ul class="co--overflow-menu-options__content">
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Option 2
+        </span>
+      </button>
+    </li>
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Option 3
+        </span>
+      </button>
+    </li>
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Option 4
+        </span>
+      </button>
+    </li>
+  </ul>
+  <!-- Note: focusable span allows for focus wrap feature within Overflow Menus -->
+  <span tabindex="0"></span>
+</div>

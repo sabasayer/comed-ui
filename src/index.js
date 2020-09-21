@@ -15,6 +15,8 @@ import { initiateAccordions } from "./components/accordion/accordion";
 import { initiateCalenders } from "./components/date-picker/calender/date-picker-calender";
 import { initiateContentSwitchers } from "./components/form/content-switcher/content-switcher";
 import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
+import { initiateSearchBy } from "./components/search-by/search-by";
+import { initiateSearch } from "./components/search/search";
 
 const container = document.getElementById("dynamic-content-container");
 
@@ -80,6 +82,8 @@ const handleClick = (items, link) => {
       initiateContentSwitchers();
       initiateToggleButtons();
       initiateCalenders();
+      initiateSearch();
+      initiateSearchBy();
     });
 };
 

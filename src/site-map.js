@@ -3,6 +3,7 @@ export const siteMap = {
   Buttons: "components/button/button.html",
   "Side Nav": "components/side-nav/side-nav.html",
   Search: "components/search/search.html",
+  "Search By": "components/search-by/search-by.html",
   Checkbox: "components/form/checkbox/checkbox.html",
   Radio: "components/form/radio/radio.html",
   Switch: "components/form/switch/Switch.html",
