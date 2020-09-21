@@ -7,13 +7,14 @@ import { initiateModal } from "./components/modal/modal";
 import { initiateDropdowns } from "./components/form/dropdown/dropdown";
 import { initiateMultiSelects } from "./components/form/multi-select/multi-select";
 import { initiateChips } from "./components/form/chips/chips";
-import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
 import { initiateOverflowMenus } from "./components/overflow-menu/overflow-menu";
 import { initiateDataTables } from "./components/data-table/data-table";
 import { initiatePaginations } from "./components/pagination/pagination";
 import { initiateAccordions } from "./components/accordion/accordion";
 
 import { initiateCalenders } from "./components/date-picker/calender/date-picker-calender";
+import { initiateContentSwitchers } from "./components/form/content-switcher/content-switcher";
+import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
 
 const container = document.getElementById("dynamic-content-container");
 
@@ -74,10 +75,10 @@ const handleClick = (items, link) => {
       initiateModal();
       initiateMultiSelects();
       initiateChips();
-      initiateToggleButtons();
       initiatePaginations();
       initiateDataTables();
-
+      initiateContentSwitchers();
+      initiateToggleButtons();
       initiateCalenders();
     });
 };

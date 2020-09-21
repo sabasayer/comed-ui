@@ -1,79 +1,243 @@
-<!--
-  Copyright IBM Corp. 2016, 2018
-
-  This source code is licensed under the Apache-2.0 license found in the
-  LICENSE file in the root directory of this source tree.
--->
-
-<div class="co--tile mb-3 co--tile--light">
-  <h5>Small</h5>
-  <div
-    data-content-switcher
-    class="co--content-switcher co--content-switcher--sm"
-    role="tablist"
-    aria-label="Demo switch content"
-  >
-    <button
-      class="co--content-switcher-btn co--content-switcher--selected"
-      role="tab"
-      aria-selected="true"
-    >
-      <span class="co--content-switcher__label">First section</span>
+<div class="p-3">
+  <h6>Sm</h6>
+  <div class="co--toggle-buttons co--toggle-buttons--sm">
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      First Item
     </button>
-    <button class="co--content-switcher-btn" role="tab">
-      <span class="co--content-switcher__label">Second section</span>
+    <button class="co--toggle-buttons-item">Second Item</button>
+    <button class="co--toggle-buttons-item">Third Item</button>
+    <div data-overflow-menu class="co--overflow-menu">
+      <button
+        class="co--overflow-menu__trigger co--tooltip__trigger co--tooltip--a11y co--tooltip--right co--tooltip--align-start"
+        aria-haspopup="true"
+        aria-expanded="false"
+        id="example-qzrvj7eu95j-trigger"
+        aria-controls="example-qzrvj7eu95j"
+        data-overflow-menu-target="#example-qzrvj7eu95j"
+        data-overflow-menu-trigger
+      >
+        <span class="co--assistive-text">Overflow</span>
+        <svg
+          focusable="false"
+          preserveAspectRatio="xMidYMid meet"
+          style="will-change: transform"
+          xmlns="http://www.w3.org/2000/svg"
+          class="co--overflow-menu__icon"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          aria-hidden="true"
+        >
+          <circle cx="8" cy="3" r="1"></circle>
+          <circle cx="8" cy="8" r="1"></circle>
+          <circle cx="8" cy="13" r="1"></circle>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="p-3">
+  <h6>Default</h6>
+  <div class="co--toggle-buttons">
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      First Item
     </button>
-    <button class="co--content-switcher-btn" role="tab">
-      <span class="co--content-switcher__label">Third section</span>
+    <button class="co--toggle-buttons-item">Second Item</button>
+    <button class="co--toggle-buttons-item">Third Item</button>
+  </div>
+</div>
+
+<div class="p-3">
+  <h6>Xl</h6>
+  <div class="co--toggle-buttons co--toggle-buttons--xl">
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      First Item
+    </button>
+    <button class="co--toggle-buttons-item">Second Item</button>
+    <button class="co--toggle-buttons-item">Third Item</button>
+  </div>
+</div>
+
+<div class="p-3">
+  <h6>Has child</h6>
+  <div class="co--toggle-buttons">
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      <span>First Item</span>
+      <div class="co--toggle-buttons-children">
+        <span
+          class="co--toggle-buttons-child co--toggle-buttons-child--selected"
+          >Ch 1</span
+        >
+        <span class="co--toggle-buttons-child">Ch 2</span>
+        <span class="co--toggle-buttons-child">Ch 3</span>
+      </div>
+    </button>
+    <button class="co--toggle-buttons-item">
+      <span>Secon Item</span>
+      <div class="co--toggle-buttons-children">
+        <span class="co--toggle-buttons-child">Ch 1</span>
+        <span class="co--toggle-buttons-child">Ch 2</span>
+        <span class="co--toggle-buttons-child">Ch 3</span>
+      </div>
+    </button>
+    <button class="co--toggle-buttons-item">
+      <span>Thirds Item</span>
+      <div class="co--toggle-buttons-children">
+        <span class="co--toggle-buttons-child">Ch 1</span>
+        <span class="co--toggle-buttons-child">Ch 2</span>
+        <span class="co--toggle-buttons-child">Ch 3</span>
+      </div>
     </button>
   </div>
 </div>
 
-<div class="co--tile mb-3 co--tile--light">
-  <h5>Normal</h5>
+<div class="p-3">
+  <h6>Warp</h6>
   <div
-    data-content-switcher
-    class="co--content-switcher"
-    role="tablist"
-    aria-label="Demo switch content"
+    class="co--toggle-buttons co--toggle-buttons--wrap"
+    style="max-width: 400px"
   >
-    <button
-      class="co--content-switcher-btn co--content-switcher--selected"
-      role="tab"
-      aria-selected="true"
-    >
-      <span class="co--content-switcher__label">First section</span>
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      First Item
     </button>
-    <button class="co--content-switcher-btn" role="tab">
-      <span class="co--content-switcher__label">Second section</span>
+    <button class="co--toggle-buttons-item">Second Item</button>
+    <button class="co--toggle-buttons-item">Third Item</button>
+    <button class="co--toggle-buttons-item">Fourth Item</button>
+    <button class="co--toggle-buttons-item">Fifth Item</button>
+    <button class="co--toggle-buttons-item">Sixth Item</button>
+    <button class="co--toggle-buttons-item">Sevent Item</button>
+    <button class="co--toggle-buttons-item">Eight Item</button>
+  </div>
+</div>
+
+<div class="p-3">
+  <h6>With counts</h6>
+  <div class="co--toggle-buttons">
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      <span class="co--toggle-buttons-item__count">21</span>
+      <span>First Item</span>
     </button>
-    <button class="co--content-switcher-btn" role="tab">
-      <span class="co--content-switcher__label">Third section</span>
+    <button class="co--toggle-buttons-item">
+      <span class="co--toggle-buttons-item__count">3</span>
+      <span>Second Item</span>
+    </button>
+    <button class="co--toggle-buttons-item">
+      <span class="co--toggle-buttons-item__count">11</span>
+      <span>Third Item</span>
     </button>
   </div>
 </div>
 
-<div class="co--tile co--tile--light">
-  <h5>Xlarge</h5>
-
-  <div
-    data-content-switcher
-    class="co--content-switcher co--content-switcher--xl"
-    role="tablist"
-    aria-label="Demo switch content"
-  >
-    <button
-      class="co--content-switcher-btn co--content-switcher--selected"
-      role="tab"
-      aria-selected="true"
-    >
-      <span class="co--content-switcher__label">First section</span>
+<div class="p-3">
+  <h6>With counts and children</h6>
+  <div class="co--toggle-buttons">
+    <button class="co--toggle-buttons-item co--toggle-buttons-item--selected">
+      <span class="co--toggle-buttons-item__count">21</span>
+      <span>First Item</span>
+      <div class="co--toggle-buttons-children">
+        <span class="co--toggle-buttons-child co--toggle-buttons-child--selected">
+          <svg
+            focusable="false"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="16"
+            height="16"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
+            <path d="M15 19H17V21H15zM15 23H17V25H15z"></path>
+            <path
+              d="M23,11.67V4h3V2H6V4H9v7.67a2,2,0,0,0,.4,1.2L11.75,16,9.4,19.13a2,2,0,0,0-.4,1.2V28H6v2H26V28H23V20.33a2,2,0,0,0-.4-1.2L20.25,16l2.35-3.13A2,2,0,0,0,23,11.67ZM21,4v7H11V4Zm0,16.33V28H11V20.33L14.25,16,12,13h8l-2.25,3Z"
+            ></path>
+            <title>Hourglass</title>
+          </svg>
+          2
+        </span>
+        <span class="co--toggle-buttons-child">
+          <svg
+            focusable="false"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="16"
+            height="16"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
+            <path
+              d="M13 24L4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24z"
+            ></path>
+            <title>Checkmark</title>
+          </svg>
+          8
+        </span>
+        <span class="co--toggle-buttons-child">
+          <svg
+            focusable="false"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="16"
+            height="16"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
+            <path
+              d="M27,16.76c0-.25,0-.5,0-.76s0-.51,0-.77l1.92-1.68A2,2,0,0,0,29.3,11L26.94,7a2,2,0,0,0-1.73-1,2,2,0,0,0-.64.1l-2.43.82a11.35,11.35,0,0,0-1.31-.75l-.51-2.52a2,2,0,0,0-2-1.61H13.64a2,2,0,0,0-2,1.61l-.51,2.52a11.48,11.48,0,0,0-1.32.75L7.43,6.06A2,2,0,0,0,6.79,6,2,2,0,0,0,5.06,7L2.7,11a2,2,0,0,0,.41,2.51L5,15.24c0,.25,0,.5,0,.76s0,.51,0,.77L3.11,18.45A2,2,0,0,0,2.7,21L5.06,25a2,2,0,0,0,1.73,1,2,2,0,0,0,.64-.1l2.43-.82a11.35,11.35,0,0,0,1.31.75l.51,2.52a2,2,0,0,0,2,1.61h4.72a2,2,0,0,0,2-1.61l.51-2.52a11.48,11.48,0,0,0,1.32-.75l2.42.82a2,2,0,0,0,.64.1,2,2,0,0,0,1.73-1L29.3,21a2,2,0,0,0-.41-2.51ZM25.21,24l-3.43-1.16a8.86,8.86,0,0,1-2.71,1.57L18.36,28H13.64l-.71-3.55a9.36,9.36,0,0,1-2.7-1.57L6.79,24,4.43,20l2.72-2.4a8.9,8.9,0,0,1,0-3.13L4.43,12,6.79,8l3.43,1.16a8.86,8.86,0,0,1,2.71-1.57L13.64,4h4.72l.71,3.55a9.36,9.36,0,0,1,2.7,1.57L25.21,8,27.57,12l-2.72,2.4a8.9,8.9,0,0,1,0,3.13L27.57,20Z"
+            ></path>
+            <path
+              d="M16,22a6,6,0,1,1,6-6A5.94,5.94,0,0,1,16,22Zm0-10a3.91,3.91,0,0,0-4,4,3.91,3.91,0,0,0,4,4,3.91,3.91,0,0,0,4-4A3.91,3.91,0,0,0,16,12Z"
+            ></path>
+            <title>Settings</title>
+          </svg>
+          0
+        </span>
+      </div>
     </button>
-    <button class="co--content-switcher-btn" role="tab">
-      <span class="co--content-switcher__label">Second section</span>
+    <button class="co--toggle-buttons-item">
+      <span class="co--toggle-buttons-item__count">3</span>
+      <span>Second Item</span>
     </button>
-    <button class="co--content-switcher-btn" role="tab">
-      <span class="co--content-switcher__label">Third section</span>
+    <button class="co--toggle-buttons-item">
+      <span class="co--toggle-buttons-item__count">11</span>
+      <span>Third Item</span>
     </button>
   </div>
+</div>
+
+<div
+  class="co--overflow-menu-options"
+  tabindex="-1"
+  role="menu"
+  aria-labelledby="example-qzrvj7eu95j-trigger"
+  id="example-qzrvj7eu95j"
+  data-floating-menu-direction="bottom-start"
+>
+  <ul class="co--overflow-menu-options__content">
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Option 2
+        </span>
+      </button>
+    </li>
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Option 3
+        </span>
+      </button>
+    </li>
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Option 4
+        </span>
+      </button>
+    </li>
+  </ul>
+  <!-- Note: focusable span allows for focus wrap feature within Overflow Menus -->
+  <span tabindex="0"></span>
 </div>

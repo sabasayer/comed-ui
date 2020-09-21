@@ -1,0 +1,129 @@
+@mixin toggle-button-item {
+  @include reset;
+  @include focus-outline("reset");
+
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: $border-radius;
+
+  &:hover,
+  &:active {
+    z-index: 3;
+    color: $text-01;
+    background-color: $hover-ui;
+  }
+}
+
+.#{$prefix}--toggle-buttons {
+  display: flex;
+  width: 100%;
+
+  .#{$prefix}--toggle-buttons-item {
+    @include toggle-button-item();
+
+    @include type-style("body-short-01");
+    padding: $spacing-03 $spacing-05;
+    background-color: $ui-01;
+    height: rem(40px);
+
+    &:not(:first-child) {
+      margin-left: $spacing-03;
+    }
+
+    &:focus {
+      z-index: 3;
+      box-shadow: inset 0 0 0 2px $focus;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:active {
+      z-index: 3;
+      color: $text-01;
+      background-color: $hover-ui;
+    }
+
+    &.#{$prefix}--toggle-buttons-item--selected {
+      color: $inverse-01;
+      background-color: $ui-05;
+
+      .#{$prefix}--toggle-buttons-children {
+        display: inline-flex;
+        max-width: 300px;
+      }
+    }
+
+    &__count {
+      margin-left: calc(-1 * #{$spacing-03});
+      margin-right: $spacing-03;
+      position: relative;
+      padding-right: $spacing-03;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        display: block;
+        width: rem(1px);
+        height: 100%;
+        background-color: $ui-03;
+        content: "";
+      }
+    }
+  }
+
+  &--sm {
+    .#{$prefix}--toggle-buttons-item {
+      height: rem(32px);
+    }
+  }
+  &--xl {
+    .#{$prefix}--toggle-buttons-item {
+      height: rem(48px);
+    }
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$spacing-03});
+    margin-left: calc(-1 * #{$spacing-03});
+    .#{$prefix}--toggle-buttons-item {
+      margin-top: $spacing-03;
+      margin-left: $spacing-03;
+    }
+  }
+
+  .#{$prefix}--toggle-buttons-children {
+    display: none;
+    align-items: center;
+    margin-left: $spacing-03;
+    margin-top: calc(-1 * #{$spacing-03});
+    margin-bottom: calc(-1 * #{$spacing-03});
+    height: inherit;
+    overflow: hidden;
+    max-width: 0;
+    transition: all $duration--fast-01 motion(standard, productive);
+  }
+
+  .#{$prefix}--toggle-buttons-child {
+    @include toggle-button-item();
+    @include type-style("caption-01");
+    margin-left: $spacing-03;
+    border: 1px solid $ui-01;
+    padding: $spacing-02 $spacing-04;
+
+    &.#{$prefix}--toggle-buttons-child--selected {
+      color: $text-01;
+      background-color: $ui-01;
+    }
+
+    > svg {
+      margin-right: $spacing-02;
+    }
+  }
+}
