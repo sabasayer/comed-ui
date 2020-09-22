@@ -4,6 +4,7 @@ export const siteMap = {
   "Side Nav": "components/side-nav/side-nav.html",
   Search: "components/search/search.html",
   "Search By": "components/search-by/search-by.html",
+  "Sort By": "components/sort-by/sort-by.html",
   Checkbox: "components/form/checkbox/checkbox.html",
   Radio: "components/form/radio/radio.html",
   Switch: "components/form/switch/Switch.html",
@@ -29,7 +30,9 @@ export const siteMap = {
   "Scroll Area": "components/scroll-area/scroll-area.html",
   Modal: "components/modal/modal.html",
   "Data Table": "components/data-table/data-table.html",
+  "Timeline Table": "components/timeline-table/timeline-table.html",
   List: "components/list/list.html",
+  "Tree List": "components/tree-list/tree-list.html",
   Pagination: "components/pagination/pagination.html",
   "Proggress Indicator":
     "components/progress-indicator/progress-indicator.html",
@@ -38,4 +41,5 @@ export const siteMap = {
     "components/date-picker/calender/date-picker-calender.html",
   Calender: "components/calender/calender.html",
   Loading: "components/loading/loading.html",
+  "Label and value": "components/label-and-value/label-and-value.html",
 };

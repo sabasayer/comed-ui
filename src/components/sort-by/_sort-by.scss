@@ -1,0 +1,36 @@
+.#{$prefix}--sort-by {
+  display: inline-flex;
+  background-color: $ui-01;
+  align-items: center;
+  border-bottom: 1px solid $ui-04;
+  padding-left: $spacing-03;
+  height: rem(40px);
+  border-top-left-radius: $border-radius;
+  .#{$prefix}--sort-by-icon {
+    margin: 0 $spacing-03;
+    transition: all $duration--fast-01;
+    &:hover {
+      cursor: pointer;
+    }
+    &.rotated {
+      transform: rotate(-180deg);
+    }
+  }
+  .#{$prefix}--btn {
+    background-color: $ui-01;
+    border-left: 1px solid $ui-03;
+    border-bottom: 1px solid $ui-04;
+    margin-left: $spacing-03;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &--sm {
+    height: rem(32px);
+  }
+
+  &--xl {
+    height: rem(48px);
+  }
+}

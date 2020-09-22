@@ -1,0 +1,112 @@
+.#{$prefix}--timeline-table {
+  width: 100%;
+  overflow: auto;
+  .#{$prefix}--timeline-table-header {
+    position: sticky;
+    top: 0;
+    background-color: $ui-03;
+    font-weight: carbon--font-weight("semibold");
+    z-index: 4;
+    .#{$prefix}--timeline-table-cell {
+      padding-left: 0;
+      background-color: $ui-03;
+      justify-content: flex-start;
+      &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        display: block;
+        width: rem(1px);
+        height: $spacing-02;
+        background-color: $text-01;
+        content: "";
+      }
+    }
+  }
+  .#{$prefix}--timeline-table-body {
+    background-color: $ui-01;
+    position: relative;
+
+    .#{$prefix}--timeline-table-row {
+      &:not(:first-child) {
+        border-top: 1px dashed $ui-03;
+      }
+    }
+  }
+}
+
+.#{$prefix}--timeline-table-row {
+  display: flex;
+  .#{$prefix}--timeline-table-leading-cell {
+    min-width: 100px;
+    padding: $spacing-02;
+    overflow: hidden;
+  }
+}
+
+.#{$prefix}--timeline-table-cells {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.#{$prefix}--timeline-table-cell {
+  flex: 1 0 30px;
+  padding: $spacing-02;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  &:nth-child(odd) {
+    background-color: $ui-02;
+  }
+}
+
+.#{$prefix}--timeline-table-group {
+  display: flex;
+  &:not(:first-child) {
+    border-top: 2px solid $ui-03;
+  }
+}
+
+.#{$prefix}--timeline-table-rows {
+  flex: 1 0 auto;
+}
+
+.#{$prefix}--timeline-table-icon {
+  width: rem(32px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.#{$prefix}--timeline-table__now-indicator {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: rem(8px);
+  z-index: 3;
+  overflow: hidden;
+  &-header {
+    background-color: $interactive-01;
+    width: inherit;
+    height: rem(16px);
+    border-bottom-left-radius: rem(8px);
+    border-bottom-right-radius: rem(8px);
+  }
+  &::after {
+    height: 100vh;
+    width: 1px;
+    background-color: $interactive-01;
+    z-index: 3;
+    display: block;
+    margin-left: rem(4px);
+    content: "";
+  }
+}
+
+.#{$prefix}--timeline-table-navigation {
+  display: flex;
+  align-items: center;
+  width: rem(40px);
+}

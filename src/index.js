@@ -17,6 +17,8 @@ import { initiateContentSwitchers } from "./components/form/content-switcher/con
 import { initiateToggleButtons } from "./components/form/toggle-buttons/toggle-buttons";
 import { initiateSearchBy } from "./components/search-by/search-by";
 import { initiateSearch } from "./components/search/search";
+import { initiateSortBy } from "./components/sort-by/sort-by";
+import { initiateTreeList } from "./components/tree-list/tree-list";
 
 const container = document.getElementById("dynamic-content-container");
 
@@ -84,6 +86,8 @@ const handleClick = (items, link) => {
       initiateCalenders();
       initiateSearch();
       initiateSearchBy();
+      initiateSortBy();
+      initiateTreeList();
     });
 };
 

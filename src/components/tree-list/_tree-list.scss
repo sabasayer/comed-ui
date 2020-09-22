@@ -1,0 +1,56 @@
+.#{$prefix}--tree-list {
+  background-color: $ui-01;
+
+  &--activatable {
+    .#{$prefix}--tree-list-node-content {
+      &:hover {
+        cursor: pointer;
+        background-color: $hover-ui;
+      }
+    }
+  }
+
+  .#{$prefix}--tree-list-node {
+    .#{$prefix}--tree-list-nodes {
+      overflow: hidden;
+      max-height: 0;
+      margin-left: $spacing-09;
+      transition: all $duration--fast-01 motion(standard, productive);
+    }
+
+    &--open {
+      .#{$prefix}--tree-list-icon {
+        transform: rotate(-180deg);
+      }
+      .#{$prefix}--tree-list-nodes {
+        max-height: 100vh;
+      }
+    }
+
+    &--active {
+      > .#{$prefix}--tree-list-node-content {
+        background-color: $ui-05;
+        color: $inverse-01;
+      }
+    }
+  }
+}
+
+.#{$prefix}--tree-list-node-content {
+  display: flex;
+  align-items: center;
+  height: rem(40px);
+  padding: 0 $spacing-03;
+
+  .#{$prefix}--tree-list-icon {
+    margin-right: $spacing-03;
+    width: rem(24px);
+    display: flex;
+    justify-content: center;
+    transition: all $duration--fast-01;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

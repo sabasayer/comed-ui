@@ -1,0 +1,86 @@
+<div class="p-3">
+  <div class="co--sort-by">
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      width="16"
+      height="16"
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+    >
+      <path d="M24 24L16 32 8 24zM8 8L16 0 24 8z"></path>
+      <title>Caret sort</title>
+    </svg>
+    <svg
+      focusable="false"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      width="16"
+      height="16"
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      class="co--sort-by-icon"
+    >
+      <path
+        d="M24.59 16.59L17 24.17 17 2 15 2 15 24.17 7.41 16.59 6 18 16 28 26 18 24.59 16.59z"
+      ></path>
+      <title>Arrow down</title>
+    </svg>
+    <span>Tarih</span>
+    <button
+      class="co--btn co--btn--field co--btn--icon-only"
+      data-sort-by-menu-target="#sort-by-menu-1"
+      type="button"
+    >
+      <svg
+        focusable="false"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+        class="co--dropdown__arrow co--btn__icon"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        aria-hidden="true"
+      >
+        <path d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div
+  class="co--overflow-menu-options"
+  tabindex="-1"
+  role="menu"
+  id="sort-by-menu-1"
+  data-floating-menu-direction="bottom-end"
+>
+  <ul class="co--overflow-menu-options__content">
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Tarih
+        </span>
+      </button>
+    </li>
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Adı
+        </span>
+      </button>
+    </li>
+    <li class="co--overflow-menu-options__option">
+      <button class="co--overflow-menu-options__btn" role="menuitem">
+        <span class="co--overflow-menu-options__option-content">
+          Id
+        </span>
+      </button>
+    </li>
+  </ul>
+  <!-- Note: focusable span allows for focus wrap feature within Overflow Menus -->
+  <span tabindex="0"></span>
+</div>
