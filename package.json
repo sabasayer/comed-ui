@@ -4,19 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "parcel ./src/**/*.html --open"
+    "serve": "parcel ./src/index.html --open"
   },
   "devDependencies": {
     "dart-sass": "^1.25.0",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.10"
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.12"
   },
   "dependencies": {
-    "@carbon/grid": "^10.15.0",
-    "@carbon/layout": "^10.13.0",
-    "@carbon/themes": "^10.19.0",
+    "@carbon/grid": "^10.26.0",
+    "@carbon/layout": "^10.23.0",
+    "@carbon/themes": "^10.33.0",
     "@popperjs/core": "^2.4.4",
     "@sabasayer/utils": "^1.2.2",
-    "carbon-components": "^10.20.0"
+    "carbon-components": "^10.34.0"
   }
 }
