@@ -117,9 +117,11 @@ const navigateToHash = (links) => {
 
 window.onload = () => {
   const items = document.querySelector(".co--side-nav__items");
-  Object.entries(siteMap).forEach((entry) => {
-    items.append(createLink(entry[0], entry[1]));
-  });
+  Object.entries(siteMap)
+    .sort((a, b) => (a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0))
+    .forEach((entry) => {
+      items.append(createLink(entry[0], entry[1]));
+    });
 
   document.getElementById("theme-selector").addEventListener("change", (ev) => {
     const wrapper = document.getElementById("app-wrapper");
