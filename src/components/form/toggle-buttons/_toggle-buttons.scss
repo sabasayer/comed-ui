@@ -13,6 +13,8 @@
     color: $text-01;
     background-color: $hover-ui;
   }
+
+  transition: background $duration--fast-01 motion(entrance, productive);
 }
 
 .#{$prefix}--toggle-buttons {
@@ -24,7 +26,8 @@
 
     @include type-style("body-short-01");
     padding: $spacing-03 $spacing-05;
-    background-color: $ui-01;
+    background-color: $ui-04;
+    color: $text-04;
     height: rem(40px);
 
     &:not(:first-child) {
@@ -38,13 +41,6 @@
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:hover,
-    &:active {
-      z-index: 3;
-      color: $text-01;
-      background-color: $hover-ui;
     }
 
     &.#{$prefix}--toggle-buttons-item--selected {
